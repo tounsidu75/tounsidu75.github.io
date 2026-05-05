@@ -27,23 +27,19 @@
     });
   }
 
-  // Active link au scroll (sera utile quand toutes les sections seront en place)
-  const sections = document.querySelectorAll('main section[id]');
-  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            const id = e.target.id;
-            navLinks.forEach((l) => {
-              l.classList.toggle('is-active', l.getAttribute('href') === `#${id}`);
-            });
-          }
+  // Filtre projets (page projects.html)
+  const filters = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.project-card[data-cat]');
+  if (filters.length && cards.length) {
+    filters.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        filters.forEach((b) => b.classList.toggle('is-active', b === btn));
+        cards.forEach((card) => {
+          const match = cat === 'all' || card.dataset.cat === cat;
+          card.hidden = !match;
         });
-      },
-      { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
-    );
-    sections.forEach((s) => observer.observe(s));
+      });
+    });
   }
 })();
