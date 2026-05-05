@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sami KHARRAZ | Wi-Fi Sécurisé</title>
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/projects.css">
+  
+  <!-- Polices et icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Effets tech avancés -->
+  <link rel="stylesheet" href="../assets/css/tech-theme.css">
+  <link rel="stylesheet" href="../assets/css/tech-effects.css">
+</head>
+
+<body class="theme-tech">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+        <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
+        <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+        <li><a href="../pages/formations.html"><i class="fas fa-graduation-cap"></i> Formations</a></li>
+        <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
+        <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+        <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- En-tête du projet identique aux autres pages -->
+    <section id="project-header">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="glitch-effect" data-text="Architecture Wi-Fi Sécurisée">Architecture Wi-Fi Sécurisée</h2>
+          <p>Conception et déploiement d'une infrastructure sécurisée</p>
+        </div>
+        
+        <div class="project-meta">
+          <div class="meta-item">
+            <div class="meta-label">Type de projet</div>
+            <div class="meta-value">Académique – BUT R&T</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Durée</div>
+            <div class="meta-value">8 semaines</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Rôle</div>
+            <div class="meta-value">Responsable configuration pare-feu</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Année</div>
+            <div class="meta-value">2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section de téléchargement du rapport -->
+    <section class="report-download-section">
+      <div class="container">
+        <div class="download-card tech-card">
+          <div class="download-content">
+            <div class="download-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="download-info">
+              <h3>Rapport détaillé du projet</h3>
+              <p>Accédez à la documentation complète du projet incluant la méthodologie, les configurations techniques et les résultats détaillés.</p>
+            </div>
+            <a href="../assets/docs/Rapport _SAE Equipe 6.docx.pdf" download class="download-btn">
+              <span>Télécharger le rapport</span>
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .project-header {
+        padding: 50px 0 30px;
+        text-align: center;
+        position: relative;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 40px;
+      }
+      
+      .project-title {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+      }
+      
+      .project-meta {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        padding: 15px 25px;
+        max-width: 800px;
+        margin: 0 auto;
+        border: 1px solid rgba(0, 229, 255, 0.1);
+      }
+      
+      .meta-item {
+        text-align: center;
+        min-width: 120px;
+      }
+      
+      .meta-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--tech-cyan);
+        margin-bottom: 5px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+      
+      .meta-value {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      
+      @media (max-width: 768px) {
+        .project-meta {
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+        
+        .meta-item {
+          width: calc(50% - 15px);
+          min-width: auto;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .meta-item {
+          width: 100%;
+        }
+      }
+
+      /* Styles pour la section de téléchargement du rapport */
+      .report-download-section {
+        margin-bottom: 50px;
+      }
+      
+      .download-card {
+        border-radius: 15px;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(0, 229, 255, 0.1);
+        background: rgba(13, 17, 23, 0.6);
+        transition: all 0.3s ease;
+      }
+      
+      .download-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(26, 76, 255, 0.05), rgba(0, 229, 255, 0.05));
+        z-index: 0;
+      }
+      
+      .download-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        border-color: rgba(0, 229, 255, 0.2);
+      }
+      
+      .download-content {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding: 25px;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .download-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 255, 140, 0.1));
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--tech-cyan);
+        border: 1px solid rgba(0, 229, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+      
+      .download-card:hover .download-icon {
+        transform: scale(1.1) rotate(5deg);
+        color: var(--tech-neon);
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+      }
+      
+      .download-info {
+        flex-grow: 1;
+      }
+      
+      .download-info h3 {
+        color: var(--tech-cyan);
+        margin-bottom: 8px;
+        font-size: 1.4rem;
+      }
+      
+      .download-info p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+      
+      .download-btn {
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan));
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .download-btn::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        transform: rotate(30deg);
+        transition: all 0.5s ease;
+        opacity: 0;
+      }
+      
+      .download-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+      
+      .download-btn:hover::before {
+        animation: shine 1.5s ease;
+        opacity: 1;
+      }
+      
+      @keyframes shine {
+        from {
+          left: -50%;
+        }
+        to {
+          left: 150%;
+        }
+      }
+      
+      /* Version adaptative */
+      @media (max-width: 768px) {
+        .download-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px;
+        }
+        
+        .download-icon {
+          margin: 0 auto;
+        }
+        
+        .download-btn {
+          min-width: 100%;
+          margin-top: 15px;
+        }
+      }
+    </style>
+    
+    <!-- Contexte du projet -->
+    <section id="project-context" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Contexte du projet</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <p class="project-description">
+              Ce projet a été réalisé dans le cadre de la SAE501 "Sécurisation de réseaux d'entreprise" du BUT Réseaux &amp; Télécommunications, parcours Cybersécurité, à l'IUT de Villetaneuse (Université Sorbonne Paris Nord).
+            </p>
+            
+            <div class="context-details">
+              <div class="context-item">
+                <i class="fas fa-university"></i>
+                <div>
+                  <h4>Cadre académique</h4>
+                  <p>BUT Réseaux &amp; Télécommunications – Spécialité Cybersécurité, Semestre 5</p>
+                </div>
+              </div>
+              
+              <div class="context-item">
+                <i class="fas fa-users"></i>
+                <div>
+                  <h4>Organisation</h4>
+                  <p>Travail en équipe de 4 étudiants (Équipe 6), en autonomie encadrée</p>
+                </div>
+              </div>
+              
+              <div class="context-item">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                  <h4>Objectif global</h4>
+                  <p>Conception, mise en œuvre et test d'une architecture Wi-Fi sécurisée adaptée à un usage professionnel</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Objectifs du projet -->
+    <section id="project-objectives" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Objectifs du projet</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <div class="objectives-grid">
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-user-lock"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Authentification robuste</h4>
+                  <p>Mettre en place un système d'authentification sécurisé avec FreeRADIUS pour valider l'identité des utilisateurs accédant au réseau Wi-Fi</p>
+                </div>
+              </div>
+              
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Sécurité des flux</h4>
+                  <p>Assurer la confidentialité, l'intégrité et l'isolation des flux de données transitant sur le réseau</p>
+                </div>
+              </div>
+              
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Gestion centralisée</h4>
+                  <p>Gérer les comptes utilisateurs via une base de données MySQL intégrée à FreeRADIUS</p>
+                </div>
+              </div>
+              
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Sécurisation de l'infrastructure</h4>
+                  <p>Configurer un pare-feu pfSense avec des VLANs, des règles de filtrage et un portail captif pour renforcer la sécurité</p>
+                </div>
+              </div>
+              
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-sitemap"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Architecture évolutive</h4>
+                  <p>Concevoir une architecture réseau fiable, évolutive et parfaitement documentée</p>
+                </div>
+              </div>
+              
+              <div class="objective-item">
+                <div class="objective-icon">
+                  <i class="fas fa-vial"></i>
+                </div>
+                <div class="objective-content">
+                  <h4>Tests de validation</h4>
+                  <p>Réaliser des tests techniques rigoureux pour valider l'authentification, la sécurité et les performances du système</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Méthodologie du projet -->
+    <section id="project-methodology" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Méthodologie</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <div class="methodology-timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Analyse des besoins</h4>
+                  <p>Identification des exigences techniques et organisationnelles pour une solution Wi-Fi sécurisée adaptée à un environnement professionnel.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Élaboration du cahier des charges</h4>
+                  <p>Définition formelle des spécifications, contraintes et livrables attendus pour répondre aux besoins identifiés.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Conception conceptuelle</h4>
+                  <p>Élaboration des schémas d'architecture, choix des technologies et dimensionnement de la solution globale.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-sitemap"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Conception détaillée</h4>
+                  <p>Définition précise des adresses IP, configuration des VLANs, paramétrage des équipements et planification de la sécurité.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Implémentation technique</h4>
+                  <p>Mise en œuvre concrète de la solution : configuration des équipements, déploiement des serveurs et intégration des composants.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-vial"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Tests de validation</h4>
+                  <p>Vérification rigoureuse du fonctionnement et des performances de la solution à travers divers scénarios d'utilisation.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="timeline-content">
+                  <h4>Documentation et présentation</h4>
+                  <p>Rédaction des documents techniques, des guides utilisateurs et présentation finale du projet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture mise en place -->
+    <section id="project-architecture" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Architecture</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <p class="architecture-intro">
+              L'architecture a été initialement simulée sous GNS3 avant d'être déployée sur du matériel physique. 
+              Elle adopte une approche centralisée avec une topologie en étoile, garantissant l'isolation des flux et 
+              une supervision efficace.
+            </p>
+            
+            <div class="architecture-components">
+              <h3 class="sub-title"><i class="fas fa-server"></i> Composants principaux</h3>
+              <div class="components-grid">
+                <div class="component-item">
+                  <div class="component-icon">
+                    <i class="fas fa-wifi"></i>
+                  </div>
+                  <div class="component-content">
+                    <h4>Point d'accès TP-Link</h4>
+                    <p>Borne Wi-Fi configurée pour diffuser un réseau ouvert avec authentification via portail captif.</p>
+                  </div>
+                </div>
+                
+                <div class="component-item">
+                  <div class="component-icon">
+                    <i class="fas fa-network-wired"></i>
+                  </div>
+                  <div class="component-content">
+                    <h4>Switch</h4>
+                    <p>Commutateur réseau assurant la séparation des VLANs et la distribution du trafic entre les différents équipements.</p>
+                  </div>
+                </div>
+                
+                <div class="component-item">
+                  <div class="component-icon">
+                    <i class="fas fa-user-shield"></i>
+                  </div>
+                  <div class="component-content">
+                    <h4>Serveur FreeRADIUS et MySQL</h4>
+                    <p>Serveur d'authentification centralisé connecté à une base de données pour la gestion des comptes utilisateurs.</p>
+                  </div>
+                </div>
+                
+                <div class="component-item">
+                  <div class="component-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="component-content">
+                    <h4>Pare-feu Pfsense</h4>
+                    <p>Firewall assurant le filtrage du trafic, l'isolation des réseaux et l'hébergement du portail captif.</p>
+                  </div>
+                </div>
+                
+                <div class="component-item">
+                  <div class="component-icon">
+                    <i class="fas fa-laptop"></i>
+                  </div>
+                  <div class="component-content">
+                    <h4>Clients</h4>
+                    <p>Postes utilisateurs et administrateurs se connectant au réseau via différents canaux selon leur profil.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="vlan-config">
+              <h3 class="sub-title"><i class="fas fa-sitemap"></i> Configuration des VLANs</h3>
+              <div class="vlan-table">
+                <div class="vlan-row">
+                  <div class="vlan-id">VLAN 2</div>
+                  <div class="vlan-desc">Imprimante</div>
+                  <div class="vlan-info">Réseau dédié aux périphériques d'impression</div>
+                </div>
+                <div class="vlan-row">
+                  <div class="vlan-id">VLAN 3</div>
+                  <div class="vlan-desc">Admin</div>
+                  <div class="vlan-info">Réseau sécurisé pour les administrateurs système</div>
+                </div>
+                <div class="vlan-row">
+                  <div class="vlan-id">VLAN 4</div>
+                  <div class="vlan-desc">RADIUS</div>
+                  <div class="vlan-info">Réseau isolé pour le serveur d'authentification</div>
+                </div>
+                <div class="vlan-row">
+                  <div class="vlan-id">VLAN 10</div>
+                  <div class="vlan-desc">Wi-Fi utilisateurs</div>
+                  <div class="vlan-info">Réseau des utilisateurs connectés via Wi-Fi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails techniques -->
+    <section id="project-technical-details" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Détails techniques</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <!-- Liste simplifiée des détails techniques -->
+            <div class="tech-details-list">
+              <!-- FreeRADIUS -->
+              <div class="tech-detail-item">
+                <div class="tech-detail-header">
+                  <i class="fas fa-user-shield"></i>
+                  <h3>FreeRADIUS</h3>
+                </div>
+                <div class="tech-detail-content">
+                  <ul>
+                    <li>Installation sur machine virtuelle Debian</li>
+                    <li>Intégration avec la base de données MySQL</li>
+                    <li>Configuration des modules d'authentification</li>
+                    <li>Paramétrage des fichiers clients.conf et sql</li>
+                    <li>Mise en place de la gestion centralisée des comptes</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- MySQL -->
+              <div class="tech-detail-item">
+                <div class="tech-detail-header">
+                  <i class="fas fa-database"></i>
+                  <h3>MySQL</h3>
+                </div>
+                <div class="tech-detail-content">
+                  <ul>
+                    <li>Création des tables via schema.sql et setup.sql</li>
+                    <li>Configuration de bind-address pour limiter les connexions</li>
+                    <li>Sécurisation par mots de passe robustes</li>
+                    <li>Optimisation des requêtes d'authentification</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Pfsense -->
+              <div class="tech-detail-item">
+                <div class="tech-detail-header">
+                  <i class="fas fa-shield-alt"></i>
+                  <h3>Pfsense</h3>
+                </div>
+                <div class="tech-detail-content">
+                  <ul>
+                    <li>Configuration du serveur DHCP par VLAN</li>
+                    <li>Mise en place de règles de filtrage par interface</li>
+                    <li>Déploiement d'un portail captif lié à FreeRADIUS</li>
+                    <li>Segmentation sécurisée du trafic entre VLANs</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Switch GNS3 -->
+              <div class="tech-detail-item">
+                <div class="tech-detail-header">
+                  <i class="fas fa-network-wired"></i>
+                  <h3>Switch GNS3</h3>
+                </div>
+                <div class="tech-detail-content">
+                  <ul>
+                    <li>Configuration des VLANs et domaines de diffusion</li>
+                    <li>Mise en place des liaisons trunk et accès</li>
+                    <li>Isolation du trafic entre les différents réseaux</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Point d'accès Wi-Fi -->
+              <div class="tech-detail-item">
+                <div class="tech-detail-header">
+                  <i class="fas fa-wifi"></i>
+                  <h3>Point d'accès Wi-Fi</h3>
+                </div>
+                <div class="tech-detail-content">
+                  <ul>
+                    <li>Configuration en mode routeur avec DHCP désactivé</li>
+                    <li>Mise en place d'un réseau ouvert pour faciliter la connexion</li>
+                    <li>Intégration avec le portail captif pour l'authentification</li>
+                    <li>Optimisation de la couverture et des performances</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies et outils utilisés -->
+    <section id="project-technologies" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Technologies et outils utilisés</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <div class="technologies-grid">
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>FreeRADIUS</h3>
+                  <p>Authentification des utilisateurs</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>MySQL</h3>
+                  <p>Stockage sécurisé des identifiants</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>Pfsense</h3>
+                  <p>Pare-feu + gestion VLAN + portail captif</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-sitemap"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>GNS3</h3>
+                  <p>Simulation de l'architecture réseau</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-wifi"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>TP-Link TL-MR100</h3>
+                  <p>Borne Wi-Fi (accès utilisateurs)</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fab fa-linux"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>Linux (Debian)</h3>
+                  <p>Hébergement des serveurs</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>HTML/CSS</h3>
+                  <p>Création des pages du portail captif</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>Trello / GanttProject</h3>
+                  <p>Suivi et planification du projet</p>
+                </div>
+              </div>
+              
+              <div class="technology-item">
+                <div class="technology-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="technology-content">
+                  <h3>Switch réseau</h3>
+                  <p>Interconnexion physique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Résultats obtenus -->
+    <section id="project-results" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Résultats obtenus</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <div class="results-grid">
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Connexion Wi-Fi opérationnelle</h3>
+                  <p>Portail captif personnalisé entièrement fonctionnel, avec interface utilisateur intuitive.</p>
+                </div>
+              </div>
+              
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Authentification centralisée</h3>
+                  <p>Système FreeRADIUS 100% opérationnel avec base de données utilisateurs évolutive.</p>
+                </div>
+              </div>
+              
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Isolation des flux</h3>
+                  <p>Segmentation efficace du trafic via VLANs pour protéger les différentes catégories d'utilisateurs.</p>
+                </div>
+              </div>
+              
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Sécurité renforcée</h3>
+                  <p>Règles de pare-feu personnalisées bloquant efficacement les accès non autorisés.</p>
+                </div>
+              </div>
+              
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Architecture évolutive</h3>
+                  <p>Conception modulaire permettant l'ajout facile de nouveaux services et utilisateurs.</p>
+                </div>
+              </div>
+              
+              <div class="result-item">
+                <div class="result-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="result-content">
+                  <h3>Documentation complète</h3>
+                  <p>Déploiement entièrement documenté, testé et validé selon les exigences initiales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Composition de l'équipe -->
+    <section id="project-team" class="project-section">
+      <div class="container">
+        <h2 class="section-title">Composition de l'équipe</h2>
+        <div class="project-card tech-card">
+          <div class="card-content">
+            <div class="team-info">
+              <p class="team-intro">
+                Ce projet a été réalisé par l'Équipe 6, composée d'étudiants en BUT Réseaux et Télécommunications - parcours Cybersécurité à l'IUT de Villetaneuse. Notre équipe a adopté une approche collaborative où chaque membre a pris en charge un aspect spécifique du projet.
+              </p>
+              
+              <div class="team-roles">
+                <div class="role-item">
+                  <div class="role-icon">
+                    <i class="fas fa-network-wired"></i>
+                  </div>
+                  <div class="role-content">
+                    <h3>Configuration des VLANs et pare-feu</h3>
+                    <p>Mise en place de la segmentation réseau, configuration des règles de filtrage et sécurisation des interfaces.</p>
+                  </div>
+                </div>
+                
+                <div class="role-item">
+                  <div class="role-icon">
+                    <i class="fas fa-server"></i>
+                  </div>
+                  <div class="role-content">
+                    <h3>Serveurs RADIUS et MySQL</h3>
+                    <p>Installation, configuration et sécurisation des serveurs d'authentification et de la base de données.</p>
+                  </div>
+                </div>
+                
+                <div class="role-item">
+                  <div class="role-icon">
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                  <div class="role-content">
+                    <h3>Développement du portail captif</h3>
+                    <p>Conception de l'interface utilisateur, intégration avec le système d'authentification et tests fonctionnels.</p>
+                  </div>
+                </div>
+                
+                <div class="role-item">
+                  <div class="role-icon">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <div class="role-content">
+                    <h3>Documentation et gestion de projet</h3>
+                    <p>Rédaction des livrables, suivi de l'avancement, coordination des activités et préparation des démonstrations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation de projet -->
+    <section class="project-navigation">
+      <div class="container">
+        <a href="../pages/projects.html" class="btn btn-secondary">
+          <i class="fas fa-arrow-left"></i> Retour aux projets
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sami KHARRAZ</h3>
+          <p>Étudiant en réseaux et cybersécurité<br>Passionné par les nouvelles technologies et la sécurité informatique</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../pages/about.html">À propos</a></li>
+            <li><a href="../pages/skills.html">Compétences</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liens utiles</h3>
+          <ul>
+            <li><a href="../pages/experiences.html">Expériences</a></li>
+            <li><a href="../pages/projects.html">Projets</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sami KHARRAZ - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/tech-effects.js"></script>
+  <script src="../assets/js/fix-project-links.js"></script>
+  
+  <style>
+    /* Styles spécifiques à la page projet Wi-Fi */
+    
+    /* Grille d'objectifs */
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .objective-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    
+    .objective-icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 255, 140, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--tech-cyan);
+      box-shadow: 0 5px 15px rgba(0, 229, 255, 0.1);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+    }
+    
+    .objective-content h4 {
+      color: var(--tech-cyan);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    
+    /* Contexte du projet */
+    .context-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+    
+    .context-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .context-item i {
+      font-size: 1.5rem;
+      color: var(--tech-cyan);
+      min-width: 25px;
+      text-align: center;
+    }
+    
+    .context-item h4 {
+      color: var(--tech-cyan);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    
+    /* Styles pour la section Méthodologie */
+    .methodology-timeline {
+      position: relative;
+      margin: 40px 0;
+    }
+    
+    .timeline-item {
+      display: flex;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .timeline-icon {
+      min-width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 255, 140, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    
+    .timeline-icon i {
+      font-size: 1.5rem;
+      color: var(--tech-cyan);
+    }
+    
+    .timeline-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.07);
+    }
+    
+    .timeline-content h4 {
+      color: var(--tech-cyan);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .methodology-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 30px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--tech-cyan), var(--tech-accent));
+      z-index: 0;
+    }
+    
+    /* Styles pour la section Architecture */
+    .architecture-intro {
+      margin-bottom: 30px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    
+    .sub-title {
+      color: var(--tech-cyan);
+      font-size: 1.5rem;
+      margin: 35px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .sub-title i {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+    
+    .components-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .component-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .component-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .component-icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      background: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .component-content h4 {
+      color: var(--text-color);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    
+    .component-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    /* Table VLAN */
+    .vlan-table {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .vlan-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 2fr;
+      padding: 12px 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .vlan-row:nth-child(even) {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    .vlan-row:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+    
+    .vlan-id {
+      font-weight: 600;
+      color: var(--tech-cyan);
+    }
+    
+    .vlan-desc {
+      color: var(--text-color);
+    }
+    
+    .vlan-info {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    /* Diagramme */
+    .diagram-container {
+      text-align: center;
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    
+    .diagram-image {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .diagram-placeholder {
+      padding: 50px 0;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    
+    .diagram-placeholder i {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      opacity: 0.6;
+      color: var(--tech-cyan);
+    }
+    
+    /* Styles pour les détails techniques */
+    .technical-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 25px;
+    }
+    
+    .tech-detail-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .tech-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .tech-detail-header {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .tech-detail-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tech-detail-header h3 {
+      color: var(--text-color);
+      font-size: 1.3rem;
+      margin: 0;
+    }
+    
+    .tech-detail-content {
+      padding: 20px;
+    }
+    
+    .tech-detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+    
+    .tech-detail-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+    
+    .tech-detail-list li i {
+      color: var(--tech-accent);
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+    
+    .tech-code-snippet {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    
+    .code-header {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 8px 15px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .tech-code-snippet pre {
+      margin: 0;
+      padding: 15px;
+      overflow-x: auto;
+    }
+    
+    .tech-code-snippet code {
+      color: var(--tech-neon);
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    .tech-detail-image {
+      margin-top: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .tech-detail-image img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    
+    .image-placeholder {
+      padding: 40px 0;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      border-radius: 8px;
+      color: var(--text-secondary);
+    }
+    
+    .image-placeholder i {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: var(--tech-cyan);
+      opacity: 0.6;
+    }
+    
+    /* Styles pour la liste de détails techniques simplifiée */
+    .tech-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .tech-detail-item {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .tech-detail-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .tech-detail-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .tech-detail-header i {
+      font-size: 1.5rem;
+      color: var(--tech-cyan);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 229, 255, 0.1);
+      border-radius: 50%;
+    }
+    
+    .tech-detail-header h3 {
+      font-size: 1.3rem;
+      margin: 0;
+      color: var(--text-color);
+    }
+    
+    .tech-detail-content {
+      padding: 20px;
+    }
+    
+    .tech-detail-content ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .tech-detail-content li {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      position: relative;
+    }
+    
+    .tech-detail-content li:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Styles pour la section Technologies */
+    .technologies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
+    }
+    
+    .technology-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .technology-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .technology-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 255, 140, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--tech-cyan);
+      flex-shrink: 0;
+    }
+    
+    .technology-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--text-color);
+    }
+    
+    .technology-content p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    
+    /* Styles pour la section Résultats */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .result-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      border-left: 3px solid var(--tech-accent);
+    }
+    
+    .result-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateX(5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .result-icon {
+      color: var(--tech-accent);
+      font-size: 1.8rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    
+    .result-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text-color);
+    }
+    
+    .result-content p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    
+    /* Styles pour la section Équipe */
+    .team-info {
+      padding: 10px;
+    }
+    
+    .team-intro {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .team-roles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 25px;
+    }
+    
+    .role-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .role-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .role-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(26, 76, 255, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--tech-cyan);
+      flex-shrink: 0;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+    }
+    
+    .role-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    
+    .role-content p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .objectives-grid, .context-details, .technical-details-grid, .components-grid, .technologies-grid, .results-grid, .team-roles {
+        grid-template-columns: 1fr;
+      }
+      
+      .vlan-row {
+        grid-template-columns: 60px 100px 1fr;
+        font-size: 0.9rem;
+      }
+      
+      .timeline-icon {
+        min-width: 40px;
+        height: 40px;
+      }
+      
+      .methodology-timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-icon i {
+        font-size: 1.2rem;
+      }
+      
+      .tech-detail-header {
+        padding: 12px 15px;
+      }
+      
+      .tech-detail-header i {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+      }
+      
+      .tech-detail-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</body>
+</html>

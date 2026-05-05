@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sami KHARRAZ | Tirelire électronique</title>
+  
+  <!-- Style global pour forcer le curseur standard -->
+  <style>
+    * {
+      cursor: auto !important;
+    }
+    .cursor-dot, .cursor-outline, [class*="cursor"] {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/projects.css">
+  <!-- Ajout de Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Ajout de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="theme-tech">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+        <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
+        <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+        <li><a href="../pages/formations.html"><i class="fas fa-graduation-cap"></i> Formations</a></li>
+        <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
+        <li><a href="../pages/projects.html" class="active"><i class="fas fa-project-diagram"></i> Projets</a></li>
+        <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="project-detail">
+      <h2><i class="fas fa-piggy-bank"></i> Tirelire électronique programmable</h2>
+      
+      <div class="project-meta">
+        <div class="meta-item">
+          <h4>Type de projet</h4>
+          <p>Personnel</p>
+        </div>
+        <div class="meta-item">
+          <h4>Durée</h4>
+          <p>4 semaines</p>
+        </div>
+        <div class="meta-item">
+          <h4>Rôle</h4>
+          <p>Concepteur/Développeur</p>
+        </div>
+        <div class="meta-item">
+          <h4>Année</h4>
+          <p>2022</p>
+        </div>
+      </div>
+      
+      <div class="project-description">
+        <h3>Objectif du projet</h3>
+        <p>
+          Conception et réalisation d'une tirelire électronique intelligente capable de compter automatiquement
+          les pièces insérées, d'afficher le solde total et de proposer différentes fonctionnalités d'épargne programmable.
+          Le projet visait à créer un dispositif ludique et éducatif pour encourager l'épargne chez les enfants tout en
+          introduisant des notions de programmation et d'électronique.
+        </p>
+        <p>
+          L'objectif était également de concevoir un système modulaire, permettant d'ajouter facilement de nouvelles
+          fonctionnalités, et d'utiliser des composants facilement accessibles pour que le projet puisse être reproduit
+          dans un contexte éducatif.
+        </p>
+      </div>
+      
+      <div class="project-description">
+        <h3>Caractéristiques principales</h3>
+        <ul>
+          <li><strong>Détection automatique des pièces</strong> par capteur infrarouge et disque de comptage</li>
+          <li><strong>Identification des types de pièces</strong> par leur taille via un ensemble de capteurs</li>
+          <li><strong>Écran LCD</strong> affichant le solde, les statistiques et les objectifs d'épargne</li>
+          <li><strong>Interface utilisateur</strong> avec boutons pour la navigation et la configuration</li>
+          <li><strong>Mode objectif</strong> permettant de définir un montant à atteindre avec suivi de progression</li>
+          <li><strong>Mode économie régulière</strong> qui encourage à épargner à intervalles réguliers</li>
+          <li><strong>Alertes sonores et visuelles</strong> pour les événements importants (objectif atteint, etc.)</li>
+          <li><strong>Sauvegarde des données</strong> dans une mémoire non volatile (EEPROM)</li>
+        </ul>
+      </div>
+      
+      <div class="project-challenges">
+        <h3>Défis rencontrés</h3>
+        <ul>
+          <li>Conception d'un mécanisme fiable de détection et identification des pièces</li>
+          <li>Optimisation de la consommation d'énergie pour fonctionner sur batteries</li>
+          <li>Programmation de l'interface utilisateur intuitive avec des ressources limitées</li>
+          <li>Conception du boîtier ergonomique et robuste avec des matériaux facilement accessibles</li>
+          <li>Gestion du debouncing pour les capteurs mécaniques</li>
+          <li>Mise en place d'un système de sauvegarde fiable des données d'épargne</li>
+          <li>Calibration précise du système de détection pour différentes pièces de monnaie</li>
+          <li>Intégration de tous les composants dans un format compact et esthétique</li>
+        </ul>
+      </div>
+      
+      <div class="project-description">
+        <h3>Solutions implémentées</h3>
+        <p>
+          Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :
+        </p>
+        <ul>
+          <li><strong>Système de détection à double vérification</strong> combinant capteur infrarouge et capteur de poids</li>
+          <li><strong>Microcontrôleur Arduino Nano</strong> pour son excellent rapport performance/consommation</li>
+          <li><strong>Écran LCD I2C</strong> pour réduire le nombre de connexions et la consommation</li>
+          <li><strong>Circuit de gestion d'alimentation</strong> avec mode veille automatique</li>
+          <li><strong>Boîtier modulaire en impression 3D</strong> permettant un accès facile aux composants</li>
+          <li><strong>Algorithme de filtrage</strong> pour éliminer les faux positifs lors de la détection</li>
+          <li><strong>Interface utilisateur hiérarchique</strong> nécessitant peu de boutons physiques</li>
+          <li><strong>Routines de vérification et réparation</strong> de la mémoire EEPROM en cas de corruption</li>
+        </ul>
+      </div>
+      
+      <div class="project-technologies">
+        <h3>Technologies utilisées</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">Électronique</span>
+          <span class="tech-tag">Capteurs IR</span>
+          <span class="tech-tag">LCD I2C</span>
+          <span class="tech-tag">EEPROM</span>
+          <span class="tech-tag">Impression 3D</span>
+          <span class="tech-tag">Fritzing</span>
+          <span class="tech-tag">KiCad</span>
+          <span class="tech-tag">Gestion d'énergie</span>
+          <span class="tech-tag">Design interactif</span>
+        </div>
+      </div>
+      
+      <div class="project-description">
+        <h3>Résultats et acquis</h3>
+        <p>
+          Ce projet m'a permis de développer des compétences significatives en :
+        </p>
+        <ul>
+          <li>Conception de circuits électroniques intégrant plusieurs types de capteurs</li>
+          <li>Programmation de microcontrôleurs avec des contraintes de ressources</li>
+          <li>Optimisation de code pour des systèmes embarqués</li>
+          <li>Conception et modélisation 3D de boîtiers fonctionnels</li>
+          <li>Techniques de debug pour des systèmes matériels et logiciels</li>
+          <li>Conception d'interfaces utilisateur intuitives avec des moyens limités</li>
+          <li>Gestion de l'alimentation et techniques d'économie d'énergie</li>
+          <li>Documentation technique de projets DIY reproductibles</li>
+        </ul>
+        <p>
+          La tirelire électronique a été un succès, démontrant une fiabilité de détection supérieure à 98% et une autonomie
+          de plusieurs mois sur un jeu de piles standard. Elle a suscité l'intérêt lors d'une exposition de projets
+          étudiants, particulièrement pour son potentiel éducatif. J'ai documenté l'ensemble du projet pour permettre
+          sa reproduction, incluant les fichiers de conception 3D, les schémas électroniques et le code source commenté.
+        </p>
+      </div>
+      
+      <div class="buttons">
+        <a href="../pages/projects.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+        <a href="https://github.com/votre-username/tirelire-electronique" class="btn" target="_blank"><i class="fab fa-github"></i> Code source</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sami KHARRAZ</h3>
+          <p>Étudiant en réseaux et cybersécurité<br>Passionné par les nouvelles technologies et la sécurité informatique</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../pages/about.html">À propos</a></li>
+            <li><a href="../pages/skills.html">Compétences</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liens utiles</h3>
+          <ul>
+            <li><a href="../pages/experiences.html">Expériences</a></li>
+            <li><a href="../pages/projects.html">Projets</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sami KHARRAZ - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Ajout du script principal -->
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<svg width="1920" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A4CFF" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00FF8C" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Lignes horizontales -->
+  <g stroke="url(#footerGradient)" stroke-width="1">
+    <line x1="0" y1="50" x2="1920" y2="50" />
+    <line x1="0" y1="150" x2="1920" y2="150" />
+    <line x1="0" y1="250" x2="1920" y2="250" />
+  </g>
+  
+  <!-- Lignes verticales -->
+  <g stroke="url(#footerGradient)" stroke-width="1">
+    <line x1="240" y1="0" x2="240" y2="300" />
+    <line x1="480" y1="0" x2="480" y2="300" />
+    <line x1="720" y1="0" x2="720" y2="300" />
+    <line x1="960" y1="0" x2="960" y2="300" />
+    <line x1="1200" y1="0" x2="1200" y2="300" />
+    <line x1="1440" y1="0" x2="1440" y2="300" />
+    <line x1="1680" y1="0" x2="1680" y2="300" />
+  </g>
+  
+  <!-- Noeuds -->
+  <g fill="#00E5FF" fill-opacity="0.5">
+    <circle cx="240" cy="50" r="3" />
+    <circle cx="240" cy="150" r="3" />
+    <circle cx="240" cy="250" r="3" />
+    
+    <circle cx="480" cy="50" r="3" />
+    <circle cx="480" cy="150" r="3" />
+    <circle cx="480" cy="250" r="3" />
+    
+    <circle cx="720" cy="50" r="3" />
+    <circle cx="720" cy="150" r="3" />
+    <circle cx="720" cy="250" r="3" />
+    
+    <circle cx="960" cy="50" r="3" />
+    <circle cx="960" cy="150" r="3" />
+    <circle cx="960" cy="250" r="3" />
+    
+    <circle cx="1200" cy="50" r="3" />
+    <circle cx="1200" cy="150" r="3" />
+    <circle cx="1200" cy="250" r="3" />
+    
+    <circle cx="1440" cy="50" r="3" />
+    <circle cx="1440" cy="150" r="3" />
+    <circle cx="1440" cy="250" r="3" />
+    
+    <circle cx="1680" cy="50" r="3" />
+    <circle cx="1680" cy="150" r="3" />
+    <circle cx="1680" cy="250" r="3" />
+  </g>
+  
+  <!-- Lignes diagonales -->
+  <g stroke="#00FF8C" stroke-width="1.2" stroke-opacity="0.4" fill="none">
+    <path d="M0,0 L240,50 L480,150 L720,150 L960,50 L1200,150 L1440,250 L1920,250" />
+    <path d="M0,300 L240,250 L480,150 L720,50 L960,150 L1200,250 L1440,150 L1680,50 L1920,0" />
+  </g>
+  
+  <!-- Points spéciaux -->
+  <g fill="#3FFF6F" fill-opacity="0.7">
+    <circle cx="480" cy="150" r="5" />
+    <circle cx="960" cy="50" r="5" />
+    <circle cx="1440" cy="250" r="5" />
+    <circle cx="240" cy="250" r="5" />
+    <circle cx="1200" cy="150" r="5" />
+  </g>
+</svg>

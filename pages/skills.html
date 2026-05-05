@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compétences techniques de Sami KHARRAZ : Cybersécurité, Réseaux, Développement, Cloud.">
+  <title>Sami KHARRAZ | Compétences</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==================== PAGE HERO ==================== */
+    .page-hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 120px 20px 60px;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(244, 114, 182, 0.1) 0%, transparent 60%);
+    }
+
+    /* Animated grid background */
+    .cyber-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    .page-hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .page-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .page-icon-inner {
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      animation: float 6s ease-in-out infinite;
+      box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-icon::before,
+    .page-icon::after {
+      content: '';
+      position: absolute;
+      border-radius: 30px;
+      animation: pulse-ring 3s ease-out infinite;
+    }
+
+    .page-icon::before {
+      inset: -10px;
+      border: 2px solid var(--primary);
+      opacity: 0.5;
+    }
+
+    .page-icon::after {
+      inset: -20px;
+      border: 2px solid var(--secondary);
+      opacity: 0.3;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.2; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ==================== FILTER SECTION ==================== */
+    .skills-section {
+      padding: 60px 20px 120px;
+    }
+
+    .filters-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .filter-btn:hover::before,
+    .filter-btn.active::before {
+      opacity: 1;
+    }
+
+    .filter-btn span,
+    .filter-btn i {
+      position: relative;
+      z-index: 1;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    }
+
+    .filter-btn i {
+      font-size: 1.1rem;
+    }
+
+    /* ==================== SKILLS GRID ==================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ==================== SKILL CARD ==================== */
+    .skill-card {
+      position: relative;
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .skill-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill-card.hidden {
+      display: none;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      padding: 2px;
+      background: var(--gradient-border);
+      background-size: 300% 300%;
+      animation: gradient-shift 6s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .skill-card:hover::before {
+      opacity: 1;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3),
+                  0 0 40px var(--card-glow, rgba(99, 102, 241, 0.2));
+    }
+
+    /* Card Header */
+    .skill-header {
+      padding: 30px 30px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .skill-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      position: relative;
+      flex-shrink: 0;
+      transition: all 0.4s ease;
+    }
+
+    .skill-card:hover .skill-icon {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    /* Category-specific colors */
+    .skill-card[data-category="security"] .skill-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .skill-card[data-category="security"] { --card-glow: rgba(239, 68, 68, 0.2); }
+
+    .skill-card[data-category="network"] .skill-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .skill-card[data-category="network"] { --card-glow: rgba(59, 130, 246, 0.2); }
+
+    .skill-card[data-category="dev"] .skill-icon { background: linear-gradient(135deg, #10b981, #059669); }
+    .skill-card[data-category="dev"] { --card-glow: rgba(16, 185, 129, 0.2); }
+
+    .skill-card[data-category="cloud"] .skill-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .skill-card[data-category="cloud"] { --card-glow: rgba(139, 92, 246, 0.2); }
+
+    .skill-card[data-category="system"] .skill-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .skill-card[data-category="system"] { --card-glow: rgba(245, 158, 11, 0.2); }
+
+    .skill-card[data-category="telecom"] .skill-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .skill-card[data-category="telecom"] { --card-glow: rgba(6, 182, 212, 0.2); }
+
+    .skill-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+
+    .skill-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    /* Card Content */
+    .skill-content {
+      padding: 25px 30px 30px;
+    }
+
+    /* Skill Items */
+    .skill-items {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(5px);
+    }
+
+    .skill-item-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(99, 102, 241, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-light);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover .skill-item-icon {
+      background: var(--gradient-primary);
+      color: white;
+    }
+
+    .skill-item-content h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 4px;
+    }
+
+    .skill-item-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Skill Tags */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      padding: 6px 14px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--primary-light);
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--gradient-primary);
+      color: white;
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+
+    /* ==================== CERTIFICATIONS SECTION ==================== */
+    .certifications-section {
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .certifications-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(6, 182, 212, 0.05));
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      position: relative;
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .cert-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .cert-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .cert-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .cert-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      transition: all 0.4s ease;
+    }
+
+    .cert-card:hover .cert-icon {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    .cert-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .cert-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .cert-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 15px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .cert-status.obtained {
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+    }
+
+    .cert-status.progress {
+      background: rgba(245, 158, 11, 0.1);
+      color: #f59e0b;
+    }
+
+    /* ==================== CTA SECTION ==================== */
+    .cta-section {
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .cta-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 60px;
+      background: var(--bg-card);
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 30px;
+      padding: 2px;
+      background: var(--gradient-border);
+      background-size: 300% 300%;
+      animation: gradient-shift 6s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    .cta-container h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-container p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filters-container {
+        gap: 10px;
+      }
+
+      .filter-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+      }
+
+      .filter-btn span {
+        display: none;
+      }
+
+      .skill-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-container {
+        padding: 40px 20px;
+      }
+
+      .cta-container h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-hero {
+        min-height: 40vh;
+        padding: 100px 15px 40px;
+      }
+
+      .page-icon {
+        width: 100px;
+        height: 100px;
+      }
+
+      .page-icon-inner {
+        font-size: 2.5rem;
+      }
+
+      .skill-content {
+        padding: 20px;
+      }
+
+      .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span></a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">À propos</span></a></li>
+        <li><a href="skills.html" class="active"><i class="fas fa-laptop-code"></i> <span data-i18n="nav.skills">Compétences</span></a></li>
+        <li><a href="formations.html"><i class="fas fa-graduation-cap"></i> <span data-i18n="nav.education">Formations</span></a></li>
+        <li><a href="experiences.html"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Expériences</span></a></li>
+        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> <span data-i18n="nav.projects">Projets</span></a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+
+      <!-- Premium Language Selector -->
+      <div class="language-selector">
+        <button class="language-btn" aria-label="Changer de langue">
+          <img src="../assets/images/flags/france.png" alt="Français" class="current-lang-icon">
+          <span class="current-lang-text">Français</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown">
+          <a href="skills.html" class="language-option active" data-lang="fr">
+            <img src="../assets/images/flags/france.png" alt="Français">
+            <span>Français</span>
+          </a>
+          <a href="../en/pages/skills.html" class="language-option" data-lang="en">
+            <img src="../assets/images/flags/uk.png" alt="English">
+            <span>English</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero">
+      <div class="cyber-grid"></div>
+
+      <div class="page-hero-content">
+        <div class="page-icon">
+          <div class="page-icon-inner">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+        </div>
+        <h1 data-i18n="skills.hero.title">Compétences Techniques</h1>
+        <p data-i18n="skills.hero.subtitle">Expertise en cybersécurité, réseaux, développement et technologies cloud</p>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="skills-section">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="filters-container">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-layer-group"></i>
+            <span data-i18n="skills.filter.all">Toutes</span>
+          </button>
+          <button class="filter-btn" data-filter="security">
+            <i class="fas fa-shield-alt"></i>
+            <span data-i18n="skills.filter.security">Cybersécurité</span>
+          </button>
+          <button class="filter-btn" data-filter="network">
+            <i class="fas fa-network-wired"></i>
+            <span data-i18n="skills.filter.network">Réseaux</span>
+          </button>
+          <button class="filter-btn" data-filter="dev">
+            <i class="fas fa-code"></i>
+            <span data-i18n="skills.filter.dev">Développement</span>
+          </button>
+          <button class="filter-btn" data-filter="cloud">
+            <i class="fas fa-cloud"></i>
+            <span data-i18n="skills.filter.cloud">Cloud</span>
+          </button>
+          <button class="filter-btn" data-filter="system">
+            <i class="fas fa-server"></i>
+            <span data-i18n="skills.filter.system">Systèmes</span>
+          </button>
+          <button class="filter-btn" data-filter="telecom">
+            <i class="fas fa-broadcast-tower"></i>
+            <span data-i18n="skills.filter.telecom">Télécom</span>
+          </button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- Cybersécurité -->
+          <div class="skill-card" data-category="security">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.security.title">Cybersécurité</h3>
+                <p class="skill-subtitle" data-i18n="skills.security.subtitle">Protection & Analyse</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-bug"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.security.pentest">Tests d'intrusion</h4>
+                    <p>Nessus, Metasploit, Burp Suite</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.security.soc">Supervision SOC</h4>
+                    <p data-i18n="skills.security.soc.desc">SIEM, GoAccess, analyse des logs</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.security.osint">OSINT</h4>
+                    <p data-i18n="skills.security.osint.desc">Recherche en sources ouvertes</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Pentest</span>
+                <span class="skill-tag">SIEM</span>
+                <span class="skill-tag">Forensique</span>
+                <span class="skill-tag">OWASP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Réseaux -->
+          <div class="skill-card" data-category="network">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.network.title">Réseaux & Sécurité</h3>
+                <p class="skill-subtitle" data-i18n="skills.network.subtitle">Infrastructure & Protocoles</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-route"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.network.protocols">Protocoles & VPN</h4>
+                    <p>OSPF, BGP, MPLS, IPsec, OpenVPN</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-fire"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.network.firewall">Pare-feu</h4>
+                    <p>Stormshield, pfSense, Huawei, Fortinet</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-hdd"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.network.equipment">Équipements</h4>
+                    <p data-i18n="skills.network.equipment.desc">Cisco, Huawei - Configuration CLI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Cisco</span>
+                <span class="skill-tag">VLANs</span>
+                <span class="skill-tag">Firewall</span>
+                <span class="skill-tag">IDS/IPS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Systèmes -->
+          <div class="skill-card" data-category="system">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.system.title">Systèmes</h3>
+                <p class="skill-subtitle" data-i18n="skills.system.subtitle">Administration & Scripts</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.system.os">Systèmes d'exploitation</h4>
+                    <p>Linux, Windows, Windows Server</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-users-cog"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.system.admin">Administration</h4>
+                    <p>Active Directory, Microsoft 365</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.system.scripting">Scripting</h4>
+                    <p data-i18n="skills.system.scripting.desc">Bash, PowerShell, automatisation</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Windows</span>
+                <span class="skill-tag">AD</span>
+                <span class="skill-tag">PowerShell</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Développement -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.dev.title">Développement</h3>
+                <p class="skill-subtitle" data-i18n="skills.dev.subtitle">Code & Bases de données</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.dev.languages">Langages</h4>
+                    <p>Python, PHP, HTML/CSS, JavaScript</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.dev.databases">Bases de données</h4>
+                    <p>MySQL, MongoDB, PostgreSQL</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-code-branch"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.dev.versioning">Versioning</h4>
+                    <p data-i18n="skills.dev.versioning.desc">Git, GitHub, workflows</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.cloud.title">Cloud & Virtualisation</h3>
+                <p class="skill-subtitle" data-i18n="skills.cloud.subtitle">Infrastructure moderne</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.cloud.platforms">Plateformes Cloud</h4>
+                    <p>Azure, AWS (IaaS, PaaS, SaaS)</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fab fa-docker"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.cloud.containers">Conteneurisation</h4>
+                    <p data-i18n="skills.cloud.containers.desc">Docker, notions Kubernetes</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-cube"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.cloud.virtual">Virtualisation</h4>
+                    <p>VMware, VirtualBox, Hyper-V</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">VMware</span>
+                <span class="skill-tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Télécommunications -->
+          <div class="skill-card" data-category="telecom">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-broadcast-tower"></i>
+              </div>
+              <div>
+                <h3 class="skill-title" data-i18n="skills.telecom.title">Télécommunications</h3>
+                <p class="skill-subtitle" data-i18n="skills.telecom.subtitle">Réseaux & Téléphonie</p>
+              </div>
+            </div>
+            <div class="skill-content">
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-rss"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.telecom.mobile">Réseaux mobiles</h4>
+                    <p>GSM, LTE, 4G/5G</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-ethernet"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.telecom.fiber">Fibre optique</h4>
+                    <p data-i18n="skills.telecom.fiber.desc">Installation, configuration, test</p>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="skill-item-content">
+                    <h4 data-i18n="skills.telecom.voip">Téléphonie</h4>
+                    <p data-i18n="skills.telecom.voip.desc">VoIP, SIP, téléphonie IP</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">GSM</span>
+                <span class="skill-tag">Fibre</span>
+                <span class="skill-tag">VoIP</span>
+                <span class="skill-tag">SIP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section class="certifications-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="skills.cert.title">Certifications</h2>
+          <p data-i18n="skills.cert.subtitle">Mes qualifications professionnelles</p>
+        </div>
+
+        <div class="certifications-grid">
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Cisco CCNA</h3>
+            <p>Networking Fundamentals</p>
+            <span class="cert-status progress">
+              <i class="fas fa-spinner"></i>
+              <span data-i18n="skills.cert.progress">En préparation</span>
+            </span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>CompTIA Security+</h3>
+            <p>Cybersecurity Certification</p>
+            <span class="cert-status progress">
+              <i class="fas fa-spinner"></i>
+              <span data-i18n="skills.cert.progress">En préparation</span>
+            </span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Azure Fundamentals</h3>
+            <p>Microsoft AZ-900</p>
+            <span class="cert-status progress">
+              <i class="fas fa-spinner"></i>
+              <span data-i18n="skills.cert.progress">En préparation</span>
+            </span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3>TOEIC</h3>
+            <p>English Proficiency</p>
+            <span class="cert-status obtained">
+              <i class="fas fa-check-circle"></i>
+              <span data-i18n="skills.cert.obtained">Obtenu</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-container">
+          <h2 data-i18n="skills.cta.title">Intéressé par mon profil ?</h2>
+          <p data-i18n="skills.cta.desc">Découvrez mes projets ou contactez-moi directement pour discuter de vos besoins</p>
+          <div class="cta-buttons">
+            <a href="projects.html" class="btn-hero btn-primary-hero">
+              <i class="fas fa-folder-open"></i>
+              <span data-i18n="skills.cta.projects">Voir mes projets</span>
+            </a>
+            <a href="contact.html" class="btn-hero btn-secondary-hero">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="skills.cta.contact">Me contacter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sami KHARRAZ</h3>
+          <p><span data-i18n="footer.description">Étudiant en réseaux et cybersécurité</span><br><span data-i18n="footer.description2">Passionné par la sécurité informatique</span></p>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.nav.title">Navigation</h3>
+          <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span></a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">À propos</span></a></li>
+            <li><a href="skills.html"><i class="fas fa-laptop-code"></i> <span data-i18n="nav.skills">Compétences</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.links.title">Liens utiles</h3>
+          <ul>
+            <li><a href="experiences.html"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Expériences</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-project-diagram"></i> <span data-i18n="nav.projects">Projets</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sami KHARRAZ - <span data-i18n="footer.rights">Tous droits réservés</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // ==================== FILTER FUNCTIONALITY ====================
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const skillCards = document.querySelectorAll('.skill-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.dataset.filter;
+
+          skillCards.forEach((card, index) => {
+            const category = card.dataset.category;
+
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, index * 100);
+            } else {
+              card.classList.remove('visible');
+              setTimeout(() => {
+                card.classList.add('hidden');
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // ==================== SCROLL ANIMATIONS ====================
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      skillCards.forEach(card => {
+        observer.observe(card);
+      });
+
+      // ==================== SKILL TAG ANIMATION ====================
+      const allSkillCards = document.querySelectorAll('.skill-card');
+
+      allSkillCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          const tags = this.querySelectorAll('.skill-tag');
+          tags.forEach((tag, index) => {
+            setTimeout(() => {
+              tag.style.transform = 'translateY(-3px)';
+            }, index * 50);
+          });
+        });
+
+        card.addEventListener('mouseleave', function() {
+          const tags = this.querySelectorAll('.skill-tag');
+          tags.forEach(tag => {
+            tag.style.transform = 'translateY(0)';
+          });
+        });
+      });
+
+      // ==================== CERTIFICATION CARDS ====================
+      const certCards = document.querySelectorAll('.cert-card');
+
+      const certObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }, index * 150);
+            certObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      certCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        certObserver.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

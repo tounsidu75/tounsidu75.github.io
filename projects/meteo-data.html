@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sami KHARRAZ | Données météo IoT</title>
+  
+  <!-- Style global pour forcer le curseur standard -->
+  <style>
+    * {
+      cursor: auto !important;
+    }
+    .cursor-dot, .cursor-outline, [class*="cursor"] {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/projects.css">
+  <!-- Ajout de Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Ajout de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="theme-tech">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+        <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
+        <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+        <li><a href="../pages/formations.html"><i class="fas fa-graduation-cap"></i> Formations</a></li>
+        <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
+        <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+        <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="project-detail">
+      <h2><i class="fas fa-cloud-sun"></i> Analyse de données météorologiques</h2>
+      
+      <div class="project-meta">
+        <div class="meta-item">
+          <h4>Type de projet</h4>
+          <p>Académique - BUT R&T</p>
+        </div>
+        <div class="meta-item">
+          <h4>Durée</h4>
+          <p>6 semaines</p>
+        </div>
+        <div class="meta-item">
+          <h4>Rôle</h4>
+          <p>Analyste de données</p>
+        </div>
+        <div class="meta-item">
+          <h4>Année</h4>
+          <p>2022</p>
+        </div>
+      </div>
+      
+      <div class="project-description">
+        <h3>Objectif du projet</h3>
+        <p>
+          Ce projet consistait à concevoir et mettre en œuvre un système complet de collecte, stockage, analyse et
+          visualisation de données météorologiques. L'objectif était de créer un réseau de capteurs IoT capable
+          de collecter des données environnementales (température, humidité, pression atmosphérique, vitesse du vent, etc.),
+          de les transmettre à une base de données centralisée, puis d'analyser ces données pour en extraire des tendances 
+          et des corrélations significatives.
+        </p>
+        <p>
+          Le projet s'inscrivait dans une démarche d'exploration des technologies IoT appliquées à la surveillance
+          environnementale, avec un focus particulier sur l'optimisation des protocoles de communication pour les
+          dispositifs à faible consommation et la mise en œuvre de techniques d'analyse de données pour identifier
+          des modèles météorologiques locaux.
+        </p>
+      </div>
+      
+      <div class="project-description">
+        <h3>Architecture du système</h3>
+        <ul>
+          <li><strong>Capteurs météorologiques</strong> basés sur des modules ESP32 avec divers capteurs environnementaux</li>
+          <li><strong>Protocole MQTT</strong> pour la communication efficace entre les capteurs et le serveur central</li>
+          <li><strong>Broker MQTT (Mosquitto)</strong> pour la gestion des messages entre les différents composants</li>
+          <li><strong>Base de données Time Series (InfluxDB)</strong> optimisée pour le stockage de données temporelles</li>
+          <li><strong>Système d'analyse en temps réel</strong> pour le traitement des données entrantes</li>
+          <li><strong>Scripts d'analyse Python</strong> utilisant pandas et NumPy pour l'analyse statistique</li>
+          <li><strong>Interface de visualisation (Grafana)</strong> pour présenter les données et tendances sous forme de tableaux de bord interactifs</li>
+          <li><strong>Système d'alerte</strong> pour notifier des conditions météorologiques exceptionnelles</li>
+        </ul>
+      </div>
+      
+      <div class="project-challenges">
+        <h3>Défis rencontrés</h3>
+        <ul>
+          <li>Conception de stations météo autonomes fonctionnant sur batterie avec une autonomie suffisante</li>
+          <li>Optimisation de la transmission des données pour minimiser la consommation énergétique</li>
+          <li>Gestion de la connectivité intermittente des capteurs et récupération des données manquantes</li>
+          <li>Calibration des capteurs pour garantir la précision des mesures</li>
+          <li>Conception d'une base de données performante pour gérer un grand volume de données temporelles</li>
+          <li>Mise en place d'algorithmes d'analyse capables d'identifier des tendances et anomalies</li>
+          <li>Création de visualisations pertinentes et intuitives pour présenter les données</li>
+          <li>Déploiement du système dans différentes conditions environnementales</li>
+        </ul>
+      </div>
+      
+      <div class="project-description">
+        <h3>Solutions implémentées</h3>
+        <p>
+          Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :
+        </p>
+        <ul>
+          <li><strong>Mode veille profonde</strong> des ESP32 entre les mesures pour maximiser l'autonomie</li>
+          <li><strong>Protocole MQTT-SN</strong> optimisé pour les réseaux contraints avec QoS adapté aux besoins</li>
+          <li><strong>Mise en cache locale</strong> sur les capteurs en cas de déconnexion temporaire</li>
+          <li><strong>Algorithmes de calibration</strong> avec compensation des facteurs environnementaux</li>
+          <li><strong>Sharding et rétention configurables</strong> dans InfluxDB pour gérer la croissance des données</li>
+          <li><strong>Analyses prédictives</strong> utilisant des modèles statistiques pour identifier les tendances</li>
+          <li><strong>Tableaux de bord Grafana</strong> avec différents niveaux de granularité temporelle</li>
+          <li><strong>Boîtiers étanches et résistants</strong> pour protéger les capteurs des intempéries</li>
+        </ul>
+      </div>
+      
+      <div class="project-technologies">
+        <h3>Technologies utilisées</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">ESP32</span>
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">MQTT</span>
+          <span class="tech-tag">Mosquitto</span>
+          <span class="tech-tag">InfluxDB</span>
+          <span class="tech-tag">Grafana</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">NumPy</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Node-RED</span>
+          <span class="tech-tag">Raspberry Pi</span>
+        </div>
+      </div>
+      
+      <div class="project-description">
+        <h3>Résultats et acquis</h3>
+        <p>
+          Ce projet m'a permis de développer des compétences significatives en :
+        </p>
+        <ul>
+          <li>Conception et déploiement de systèmes IoT complets</li>
+          <li>Programmation de microcontrôleurs pour des applications de capteurs</li>
+          <li>Implémentation de protocoles de communication efficaces et fiables</li>
+          <li>Gestion de bases de données temporelles à haute performance</li>
+          <li>Techniques d'analyse de données et modélisation statistique</li>
+          <li>Conception d'interfaces de visualisation de données intuitives</li>
+          <li>Déploiement d'applications conteneurisées avec Docker</li>
+          <li>Gestion de projet technique avec contraintes matérielles et logicielles</li>
+        </ul>
+        <p>
+          Le système a été déployé avec succès sur trois sites différents, collectant plus de 500 000 points de données
+          sur une période de quatre semaines. L'analyse a permis d'identifier des microclimats locaux et des corrélations
+          intéressantes entre différentes variables météorologiques. Les tableaux de bord développés ont été présentés
+          lors d'une journée porte ouverte du département, suscitant un intérêt significatif pour cette application
+          concrète des technologies IoT et d'analyse de données.
+        </p>
+      </div>
+      
+      <div class="buttons">
+        <a href="../pages/projects.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+        <a href="#" class="btn"><i class="fas fa-code"></i> Documentation technique</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sami KHARRAZ</h3>
+          <p>Étudiant en réseaux et cybersécurité<br>Passionné par la sécurité informatique</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liens utiles</h3>
+          <ul>
+            <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
+            <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+            <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sami KHARRAZ - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Ajout du script principal -->
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

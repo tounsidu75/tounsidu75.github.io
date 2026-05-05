@@ -1,0 +1,93 @@
+/**
+ * Thème Tech Network 2.0 - Palette de couleurs optimisée pour représenter l'informatique et les réseaux
+ * Inspiré des interfaces de cybersécurité, des matrices de code et des environnements réseau modernes
+ */
+
+:root {
+  /* Couleurs primaires - Base du thème */
+  --tech-dark: #0D1117;        /* Noir bleuté profond - fond principal */
+  --tech-darker: #010409;      /* Noir absolu - fond secondaire/footer */
+  --tech-blue: #1A4CFF;        /* Bleu électrique profond */
+  --tech-cyan: #00E5FF;        /* Cyan électrique vif */
+  --tech-cyan-light: #70F3FF;  /* Cyan clair électrique */
+  
+  /* Couleurs secondaires et d'accentuation */
+  --tech-accent: #00FF8C;      /* Vert néon - accent visuel fort */
+  --tech-green: #3FFF6F;       /* Vert matrix pour code, éléments cyber */
+  --tech-purple: #A374FF;      /* Violet hi-tech - innovation */
+  --tech-orange: #FF7D3A;      /* Orange - attention, services */
+  --tech-red: #FF2957;         /* Rouge cyber - alertes */
+  
+  /* Éléments fluorescents/néon pour accents spéciaux */
+  --tech-neon: #39FF14;        /* Vert matrix classique */
+  --tech-neon-blue: #00D8FF;   /* Bleu holographique */
+  
+  /* Variantes de gris pour le texte et les fonds */
+  --gray-100: #F5F7FA;         /* Gris très clair - texte principal */
+  --gray-200: #E4E7EB;         /* Gris clair */
+  --gray-300: #CBD2D9;         /* Gris moyen clair */
+  --gray-400: #9AA5B1;         /* Gris moyen */
+  --gray-500: #7B8794;         /* Gris moyen foncé */
+  --gray-600: #616E7C;         /* Gris foncé */
+  --gray-700: #4A5568;         /* Gris très foncé */
+  --gray-800: #323F4B;         /* Presque noir */
+  --gray-900: #1F2933;         /* Noir nuancé */
+  
+  /* Transparences fonctionnelles */
+  --overlay-dark: rgba(13, 17, 23, 0.75);   /* Overlay sombre */
+  --overlay-light: rgba(244, 247, 252, 0.1); /* Overlay clair */
+  
+  /* Mappings fonctionnels */
+  --card-bg: rgba(13, 17, 23, 0.75);        /* Fond de carte */
+  --code-bg: rgba(1, 4, 9, 0.85);           /* Fond de code */
+  --tooltip-bg: rgba(1, 4, 9, 0.95);        /* Fond de tooltip */
+  
+  /* Effets spéciaux */
+  --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.6);    /* Lueur cyan électrique */
+  --glow-green: 0 0 20px rgba(63, 255, 111, 0.6);  /* Lueur verte matrix */
+  --glow-purple: 0 0 20px rgba(163, 116, 255, 0.6); /* Lueur violette */
+  
+  /* Dégradés prédéfinis */
+  --gradient-primary: linear-gradient(135deg, var(--tech-blue), var(--tech-cyan));
+  --gradient-accent: linear-gradient(135deg, var(--tech-cyan), var(--tech-accent));
+  --gradient-neon: linear-gradient(135deg, var(--tech-neon-blue), var(--tech-neon));
+  --gradient-dark: linear-gradient(135deg, var(--tech-darker), var(--tech-dark));
+}
+
+/* Corps du document avec thème appliqué */
+.theme-tech {
+  background-color: var(--tech-dark);
+  color: var(--gray-100);
+  background-image: radial-gradient(
+    circle at top right,
+    rgba(26, 76, 255, 0.1),
+    transparent 70%
+  );
+  background-attachment: fixed;
+}
+
+/* Navigation - Style tech */
+.theme-tech header {
+  background-color: rgba(1, 4, 9, 0.9);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ... existing code ... */
+
+/* Circuit pattern background for sections */
+.theme-tech section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/circuit-pattern.svg');
+  background-size: cover;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ... existing code ... */
