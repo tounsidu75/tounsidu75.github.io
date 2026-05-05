@@ -1,405 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sami KHARRAZ - Étudiant passionné en cybersécurité et réseaux. Expertise en sécurité informatique, pentesting, administration système et développement Python.">
-  <meta name="keywords" content="cybersécurité, sécurité informatique, pentesting, réseaux, Python, portfolio, SOC, analyste sécurité">
-  <meta name="author" content="Sami KHARRAZ">
-  <meta name="theme-color" content="#030014">
-  <meta property="og:title" content="Sami KHARRAZ | Cybersécurité & Réseaux">
-  <meta property="og:description" content="Portfolio d'un futur ingénieur en cybersécurité">
-  <meta property="og:type" content="website">
-  <title>Sami KHARRAZ | Cybersécurité & Réseaux</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sami Kharraz — Étudiant-ingénieur Cybersécurité &amp; Réseaux | Stage Sept. 2026</title>
+  <meta name="description" content="Sami Kharraz, étudiant-ingénieur cybersécurité et réseaux à l'UTT. Recherche un stage de 6 mois à partir de septembre 2026 en Île-de-France : cybersécurité, administration systèmes & réseaux, infrastructure cloud." />
+  <meta name="author" content="Sami Kharraz" />
+  <meta name="theme-color" content="#FAFAF8" />
+  <link rel="canonical" href="https://tounsidu75.github.io/" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/home.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Sami Kharraz — Cybersécurité & Réseaux" />
+  <meta property="og:description" content="Étudiant-ingénieur cybersécurité & réseaux (UTT). Stage 6 mois · Septembre 2026 · Île-de-France." />
+  <meta property="og:url" content="https://tounsidu75.github.io/" />
+  <meta property="og:image" content="https://tounsidu75.github.io/assets/img/og-image.png" />
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sami Kharraz — Cybersécurité & Réseaux" />
+  <meta name="twitter:description" content="Étudiant-ingénieur cybersécurité & réseaux. Stage 6 mois · Sept. 2026 · IDF." />
+
+  <!-- Fonts: Geist + Geist Mono via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sami Kharraz",
+    "jobTitle": "Étudiant-ingénieur cybersécurité & réseaux",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Université de Technologie de Troyes" },
+      { "@type": "CollegeOrUniversity", "name": "Université Sorbonne Paris Nord" }
+    ],
+    "knowsAbout": [
+      "Cybersécurité", "Pentesting", "Réseaux", "Cisco IOS", "FreeRADIUS",
+      "pfSense", "DNSSEC", "Linux", "Docker", "Kubernetes"
+    ],
+    "email": "mailto:sami.kharraz.pro@gmail.com",
+    "url": "https://tounsidu75.github.io/",
+    "sameAs": [
+      "https://github.com/tounsidu75",
+      "https://linkedin.com/in/sami-kharraz"
+    ]
+  }
+  </script>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active"><i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span></a></li>
-        <li><a href="pages/about.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">À propos</span></a></li>
-        <li><a href="pages/skills.html"><i class="fas fa-laptop-code"></i> <span data-i18n="nav.skills">Compétences</span></a></li>
-        <li><a href="pages/formations.html"><i class="fas fa-graduation-cap"></i> <span data-i18n="nav.education">Formations</span></a></li>
-        <li><a href="pages/experiences.html"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Expériences</span></a></li>
-        <li><a href="pages/projects.html"><i class="fas fa-project-diagram"></i> <span data-i18n="nav.projects">Projets</span></a></li>
-        <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
-      </ul>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-      <!-- Premium Language Selector -->
-      <div class="language-selector">
-        <button class="language-btn" aria-label="Changer de langue">
-          <img src="assets/images/flags/france.png" alt="Français" class="current-lang-icon">
-          <span class="current-lang-text">Français</span>
-          <i class="fas fa-chevron-down"></i>
+  <!-- ============== NAV ============== -->
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#" aria-label="Sami Kharraz · Accueil">
+        <span class="nav-brand-mark" aria-hidden="true">SK</span>
+        <span>Sami Kharraz</span>
+      </a>
+
+      <nav class="nav-list" aria-label="Navigation principale">
+        <a class="nav-link" href="#projets" data-i18n="nav.projects">Projets</a>
+        <a class="nav-link" href="#competences" data-i18n="nav.skills">Compétences</a>
+        <a class="nav-link" href="#parcours" data-i18n="nav.path">Parcours</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-lang" href="/en/" aria-label="Switch to English">EN</a>
+        <a class="nav-icon-link" href="https://github.com/tounsidu75" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.96 10.96 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a class="nav-icon-link" href="https://linkedin.com/in/sami-kharraz" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a class="nav-icon-link" href="mailto:sami.kharraz.pro@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="M3 5l9 8 9-8"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
-        <div class="language-dropdown">
-          <a href="index.html" class="language-option active" data-lang="fr">
-            <img src="assets/images/flags/france.png" alt="Français">
-            <span>Français</span>
-          </a>
-          <a href="en/index.html" class="language-option" data-lang="en">
-            <img src="assets/images/flags/uk.png" alt="English">
-            <span>English</span>
-          </a>
-        </div>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" id="hero">
-      <!-- Animated Background Elements -->
-      <div class="hero-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-      </div>
-      <div class="hero-grid"></div>
-
-      <div class="hero-content">
-        <!-- Avatar with Orbiting Elements -->
-        <div class="hero-avatar">
-          <div class="orbit-container">
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
+  <main id="main">
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-eyebrow">Disponible · Stage 2026</p>
+          <h1 class="hero-title">Sami Kharraz</h1>
+          <p class="hero-subtitle">Étudiant-ingénieur cybersécurité &amp; réseaux — UTT</p>
+          <p class="hero-pitch">
+            Étudiant en <strong>3<sup>e</sup> année</strong> à l'UTT (Université de Technologie de Troyes), je conçois et sécurise des infrastructures réseau et systèmes. Je m'intéresse particulièrement à la <strong>détection d'intrusion</strong>, à l'<strong>automatisation</strong> et aux <strong>architectures cloud-native</strong>.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projets">
+              Voir mes projets
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="assets/docs/CV_2024_Sami_Kharraz%20.pdf" download>
+              Télécharger le CV
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg>
+            </a>
           </div>
-          <img src="assets/images/profile-pic.png" alt="Sami KHARRAZ">
         </div>
 
-        <!-- Status Badge -->
-        <div class="hero-status">
-          <div class="pulse"></div>
-          <span data-i18n="home.status">Disponible pour opportunités</span>
-        </div>
-
-        <!-- Title -->
-        <h1 class="hero-title">
-          <span class="greeting" data-i18n="home.greeting">Bonjour, je suis</span>
-          <span class="name">Sami KHARRAZ</span>
-        </h1>
-
-        <!-- Animated Role -->
-        <div class="hero-role">
-          <span data-i18n="home.role.prefix">Futur ingénieur en</span>
-          <span class="typing-text" id="typing-text">Cybersécurité</span>
-        </div>
-
-        <!-- Description -->
-        <p class="hero-description" data-i18n="home.description">
-          Passionné par la sécurité des systèmes d'information et les technologies réseau.
-          Je protège, analyse et sécurise les infrastructures numériques de demain.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="hero-buttons">
-          <a href="pages/about.html" class="btn-hero btn-primary-hero">
-            <span data-i18n="home.btn.discover">Découvrir mon profil</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="assets/docs/CV_2024_Sami_Kharraz.pdf" download class="btn-hero btn-secondary-hero">
-            <i class="fas fa-download"></i>
-            <span data-i18n="home.btn.cv">Télécharger CV</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="scroll-indicator">
-        <a href="#stats">
-          <div class="mouse"></div>
-          <span>Scroll</span>
-        </a>
+        <aside class="hero-status" aria-label="Recherche stage">
+          <div class="hero-status-header">
+            <span>Statut</span>
+            <span class="hero-status-tag">En recherche</span>
+          </div>
+          <dl class="hero-status-list">
+            <div class="hero-status-row">
+              <dt>Période</dt>
+              <dd>Septembre 2026 · 6 mois</dd>
+            </div>
+            <div class="hero-status-row">
+              <dt>Zone</dt>
+              <dd>Île-de-France</dd>
+            </div>
+            <div class="hero-status-row">
+              <dt>Niveau</dt>
+              <dd>Cycle ingénieur · 3<sup>e</sup> année</dd>
+            </div>
+          </dl>
+          <div class="hero-status-tags" aria-label="Domaines visés">
+            <span class="tag">Cybersécurité</span>
+            <span class="tag">Admin Sys &amp; Réseaux</span>
+            <span class="tag">Infrastructure</span>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- ==================== STATS SECTION ==================== -->
-    <section class="stats-section" id="stats">
+    <!-- ============== PLACEHOLDERS — sections à venir ============== -->
+    <section class="section" id="apropos">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="stat-number" data-target="3">0</div>
-            <div class="stat-label" data-i18n="home.stat.years">Années d'études</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="stat-number" data-target="10">0</div>
-            <div class="stat-label" data-i18n="home.stat.projects">Projets réalisés</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label" data-i18n="home.stat.technologies">Technologies</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="stat-number" data-target="4">0</div>
-            <div class="stat-label" data-i18n="home.stat.certifications">Certifications</div>
-          </div>
-        </div>
+        <p class="section-label"><span>01</span> À propos</p>
+        <p class="placeholder">Section à implémenter — étape suivante.</p>
       </div>
     </section>
 
-    <!-- ==================== HIGHLIGHTS SECTION ==================== -->
-    <section class="highlights-section" id="highlights">
+    <section class="section" id="projets">
       <div class="container">
-        <div class="section-title">
-          <h2 data-i18n="home.highlights.title">Ce que je fais</h2>
-          <p data-i18n="home.highlights.subtitle">Mes domaines d'expertise en cybersécurité et réseaux</p>
-        </div>
-
-        <div class="highlights-grid">
-          <!-- Cybersécurité -->
-          <div class="highlight-card">
-            <div class="highlight-icon">
-              <i class="fas fa-shield-halved"></i>
-            </div>
-            <h3 data-i18n="home.highlight.security.title">Cybersécurité</h3>
-            <p data-i18n="home.highlight.security.desc">Analyse de vulnérabilités, tests d'intrusion, mise en place de solutions de sécurité et réponse aux incidents.</p>
-            <div class="highlight-tags">
-              <span class="highlight-tag">Pentesting</span>
-              <span class="highlight-tag">SIEM</span>
-              <span class="highlight-tag" data-i18n="home.highlight.tag.forensics">Forensique</span>
-            </div>
-          </div>
-
-          <!-- Réseaux -->
-          <div class="highlight-card">
-            <div class="highlight-icon">
-              <i class="fas fa-network-wired"></i>
-            </div>
-            <h3 data-i18n="home.highlight.network.title">Administration Réseau</h3>
-            <p data-i18n="home.highlight.network.desc">Conception, déploiement et maintenance d'infrastructures réseau sécurisées et performantes.</p>
-            <div class="highlight-tags">
-              <span class="highlight-tag">Cisco</span>
-              <span class="highlight-tag">VLANs</span>
-              <span class="highlight-tag">Firewalls</span>
-            </div>
-          </div>
-
-          <!-- Développement -->
-          <div class="highlight-card">
-            <div class="highlight-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3 data-i18n="home.highlight.dev.title">Développement</h3>
-            <p data-i18n="home.highlight.dev.desc">Création d'outils d'automatisation et de scripts pour la sécurité et l'administration système.</p>
-            <div class="highlight-tags">
-              <span class="highlight-tag">Python</span>
-              <span class="highlight-tag">Bash</span>
-              <span class="highlight-tag">SQL</span>
-            </div>
-          </div>
-        </div>
+        <p class="section-label"><span>02</span> Projets</p>
+        <p class="placeholder">Section à implémenter.</p>
       </div>
     </section>
 
-    <!-- ==================== CTA SECTION ==================== -->
-    <section class="cta-section">
+    <section class="section" id="competences">
       <div class="container">
-        <div class="cta-container">
-          <div class="cta-content">
-            <h2 data-i18n="home.cta.title">Prêt à collaborer ?</h2>
-            <p data-i18n="home.cta.desc">Je suis actuellement à la recherche d'opportunités en cybersécurité. N'hésitez pas à me contacter pour discuter de vos projets.</p>
-            <div class="cta-buttons">
-              <a href="pages/contact.html" class="btn-hero btn-primary-hero">
-                <i class="fas fa-paper-plane"></i>
-                <span data-i18n="home.cta.contact">Me contacter</span>
-              </a>
-              <a href="pages/projects.html" class="btn-hero btn-secondary-hero">
-                <i class="fas fa-folder-open"></i>
-                <span data-i18n="home.cta.projects">Voir mes projets</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <p class="section-label"><span>03</span> Compétences</p>
+        <p class="placeholder">Section à implémenter.</p>
+      </div>
+    </section>
+
+    <section class="section" id="parcours">
+      <div class="container">
+        <p class="section-label"><span>04</span> Parcours</p>
+        <p class="placeholder">Section à implémenter.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-label"><span>05</span> Contact</p>
+        <p class="placeholder">Section à implémenter.</p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Sami KHARRAZ</h3>
-          <p><span data-i18n="footer.description">Étudiant en réseaux et cybersécurité</span><br><span data-i18n="footer.description2">Passionné par la sécurité informatique</span></p>
-        </div>
-        <div class="footer-section">
-          <h3 data-i18n="footer.nav.title">Navigation</h3>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Accueil</span></a></li>
-            <li><a href="pages/about.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">À propos</span></a></li>
-            <li><a href="pages/skills.html"><i class="fas fa-laptop-code"></i> <span data-i18n="nav.skills">Compétences</span></a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3 data-i18n="footer.links.title">Liens utiles</h3>
-          <ul>
-            <li><a href="pages/experiences.html"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Expériences</span></a></li>
-            <li><a href="pages/projects.html"><i class="fas fa-project-diagram"></i> <span data-i18n="nav.projects">Projets</span></a></li>
-            <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Sami KHARRAZ - <span data-i18n="footer.rights">Tous droits réservés</span></p>
-      </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Sami Kharraz</span>
+      <span class="footer-meta">Paris · Mobile Île-de-France</span>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/script.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // ==================== TYPING EFFECT ====================
-      let roles = translations['typing.roles'][i18n.getCurrentLang()];
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const typingText = document.getElementById('typing-text');
-
-      // Update roles when language changes
-      window.addEventListener('languageChanged', (e) => {
-        roles = translations['typing.roles'][e.detail.lang];
-        roleIndex = 0;
-        charIndex = 0;
-        isDeleting = false;
-        if (typingText) typingText.textContent = '';
-      });
-
-      function typeRole() {
-        const currentRole = roles[roleIndex];
-
-        if (isDeleting) {
-          typingText.textContent = currentRole.substring(0, charIndex - 1);
-          charIndex--;
-        } else {
-          typingText.textContent = currentRole.substring(0, charIndex + 1);
-          charIndex++;
-        }
-
-        let typeSpeed = isDeleting ? 50 : 100;
-
-        if (!isDeleting && charIndex === currentRole.length) {
-          typeSpeed = 2000;
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-          typeSpeed = 500;
-        }
-
-        setTimeout(typeRole, typeSpeed);
-      }
-
-      if (typingText) typeRole();
-
-      // ==================== COUNTER ANIMATION ====================
-      const statNumbers = document.querySelectorAll('.stat-number');
-      let countersStarted = false;
-
-      function animateCounter(element) {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
-        const startTime = performance.now();
-
-        function updateCounter(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easeProgress = 1 - Math.pow(1 - progress, 3);
-          const current = Math.floor(easeProgress * target);
-
-          element.textContent = current;
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          } else {
-            element.textContent = target + '+';
-          }
-        }
-
-        requestAnimationFrame(updateCounter);
-      }
-
-      const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !countersStarted) {
-            countersStarted = true;
-            statNumbers.forEach((stat, index) => {
-              setTimeout(() => animateCounter(stat), index * 200);
-            });
-          }
-        });
-      }, { threshold: 0.3 });
-
-      const statsSection = document.getElementById('stats');
-      if (statsSection) statsObserver.observe(statsSection);
-
-      // ==================== SCROLL ANIMATIONS ====================
-      const animateElements = document.querySelectorAll('.highlight-card, .stat-card');
-
-      const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
-            scrollObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-      animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        scrollObserver.observe(el);
-      });
-
-      // ==================== HEADER SCROLL EFFECT ====================
-      const header = document.querySelector('header');
-      let lastScroll = 0;
-
-      window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-
-        lastScroll = currentScroll;
-      });
-    });
-  </script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
