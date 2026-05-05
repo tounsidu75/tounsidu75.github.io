@@ -4,17 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projets — Sami Kharraz</title>
-  <meta name="description" content="5 projets BUT Cybersécurité : Wi-Fi 802.1X, réseau d'entreprise Cisco, pentesting, DNSSEC, IoT météo." />
+  <meta name="description" content="Cinq projets concrets en cybersécurité, réseau et IoT réalisés durant le BUT R&amp;T Cybersécurité à l'IUT de Villetaneuse : Wi-Fi 802.1X, DNSSEC, pentesting, routage Cisco, capteurs IoT." />
   <link rel="canonical" href="https://tounsidu75.github.io/pages/projects.html" />
   <meta name="theme-color" content="#FAFAF8" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+  <link rel="preload" href="../assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="nav" role="banner">
     <div class="container nav-inner">
@@ -22,12 +21,13 @@
         <span class="nav-brand-mark" aria-hidden="true">SK</span>
         <span>Sami Kharraz</span>
       </a>
-      <nav class="nav-list" aria-label="Navigation principale">
+      <nav class="nav-list" id="nav-list" aria-label="Navigation principale">
         <a class="nav-link" href="../index.html">Accueil</a>
         <a class="nav-link" href="about.html">À propos</a>
         <a class="nav-link is-active" href="projects.html" aria-current="page">Projets</a>
         <a class="nav-link" href="skills.html">Compétences</a>
-        <a class="nav-link" href="parcours.html">Parcours</a>
+        <a class="nav-link" href="experience.html">Expérience</a>
+        <a class="nav-link" href="formation.html">Formation</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -37,7 +37,7 @@
         <a class="nav-icon-link" href="https://linkedin.com/in/sami-kharraz" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
       </div>
@@ -45,126 +45,159 @@
   </header>
 
   <main id="main">
+
     <header class="page-header">
       <div class="container">
-        <p class="page-header-eyebrow">Projets</p>
-        <h1>5 projets BUT R&amp;T Cybersécurité.</h1>
-        <p>Réalisés en équipe ou en autonomie pendant mon BUT à l'IUT de Villetaneuse (Sorbonne Paris Nord). Chaque carte ouvre la fiche détaillée du projet.</p>
+        <p class="page-header-eyebrow">Travaux académiques</p>
+        <h1>Projets<span class="dot">.</span></h1>
+        <p>Cinq projets concrets en sécurité, réseau et IoT, réalisés durant mon BUT R&amp;T Cybersécurité à l'IUT de Villetaneuse.</p>
+        <p style="font-size: var(--text-sm); color: var(--color-text-tertiary); margin-top: var(--space-3);">
+          Les projets UTT du cycle ingénieur sont en cours et seront ajoutés au fil des semestres.
+        </p>
       </div>
     </header>
 
-    <section class="page-content">
+    <section class="section" style="padding-top: 0;">
       <div class="container">
-        <div class="projects-head">
-          <h2 style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-subtle); font-weight: 500;">Filtrer</h2>
-          <div class="projects-filters" role="tablist" aria-label="Filtrer les projets">
-            <button class="filter-chip is-active" data-filter="all" type="button">Tous</button>
-            <button class="filter-chip" data-filter="securite" type="button">Sécurité</button>
-            <button class="filter-chip" data-filter="reseau" type="button">Réseau</button>
-            <button class="filter-chip" data-filter="iot" type="button">IoT</button>
-          </div>
+
+        <!-- ========== Filtres ========== -->
+        <div class="filters" role="tablist" aria-label="Filtrer par catégorie">
+          <button class="filter-btn is-active" type="button" data-filter="all">Tous</button>
+          <button class="filter-btn" type="button" data-filter="securite">Sécurité</button>
+          <button class="filter-btn" type="button" data-filter="reseau">Réseau</button>
+          <button class="filter-btn" type="button" data-filter="iot">IoT</button>
         </div>
 
-        <div class="projects-grid">
-          <a class="project-card" href="../projects/wifi-securise.html" data-cat="securite">
-            <div class="project-card-head">
-              <span class="project-card-cat">Sécurité · SAE501</span>
-              <span class="project-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l6-6M6 5h5v5"/></svg>
-              </span>
-            </div>
-            <h3>Architecture Wi-Fi sécurisée (802.1X)</h3>
-            <p class="project-card-pitch">Conception et déploiement d'une infra Wi-Fi entreprise : authentification 802.1X via FreeRADIUS+MySQL, segmentation VLAN, portail captif pfSense, simulation GNS3.</p>
-            <div class="project-card-stack">
-              <span class="tag">FreeRADIUS</span>
-              <span class="tag">pfSense</span>
-              <span class="tag">802.1X</span>
-              <span class="tag">VLANs</span>
-              <span class="tag">GNS3</span>
-            </div>
+        <!-- ========== Grille projets ========== -->
+        <div class="project-grid" data-reveal>
+
+          <a class="card card-link project-card" href="../projects/wifi-securise.html" data-cat="securite reseau">
+            <span class="eyebrow">Réseau · Sécurité</span>
+            <h3>Architecture Wi-Fi sécurisée</h3>
+            <p>Conception et déploiement d'une infrastructure Wi-Fi entreprise sécurisée — authentification 802.1X via FreeRADIUS, pare-feu pfSense, segmentation VLAN et portail captif. Projet SAE501.</p>
+            <ul class="tag-list">
+              <li class="tag">FreeRADIUS</li>
+              <li class="tag">pfSense</li>
+              <li class="tag">802.1X</li>
+              <li class="tag">VLANs</li>
+            </ul>
+            <span class="project-card-cta">
+              Voir le détail
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
           </a>
 
-          <a class="project-card" href="../projects/reseau-entreprise.html" data-cat="reseau">
-            <div class="project-card-head">
-              <span class="project-card-cat">Réseau</span>
-              <span class="project-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l6-6M6 5h5v5"/></svg>
-              </span>
-            </div>
-            <h3>Réseau d'entreprise — Routage &amp; redondance</h3>
-            <p class="project-card-pitch">Réseau d'entreprise complet : routage dynamique OSPF multi-area, redondance HSRP, QoS pour flux voix/vidéo et sécurité périmétrique sur Cisco IOS.</p>
-            <div class="project-card-stack">
-              <span class="tag">Cisco IOS</span>
-              <span class="tag">OSPF</span>
-              <span class="tag">HSRP</span>
-              <span class="tag">QoS</span>
-              <span class="tag">ACL</span>
-            </div>
+          <a class="card card-link project-card" href="../projects/reseau-entreprise.html" data-cat="reseau">
+            <span class="eyebrow">Réseau</span>
+            <h3>Réseau d'entreprise</h3>
+            <p>Conception et déploiement d'une infrastructure routée multi-sites avec OSPF, redondance HSRP et segmentation VLAN sur équipements Cisco.</p>
+            <ul class="tag-list">
+              <li class="tag">Cisco IOS</li>
+              <li class="tag">OSPF</li>
+              <li class="tag">HSRP</li>
+              <li class="tag">VLANs</li>
+            </ul>
+            <span class="project-card-cta">
+              Voir le détail
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
           </a>
 
-          <a class="project-card" href="../projects/pentesting.html" data-cat="securite">
-            <div class="project-card-head">
-              <span class="project-card-cat">Sécurité</span>
-              <span class="project-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l6-6M6 5h5v5"/></svg>
-              </span>
-            </div>
-            <h3>Pentesting &amp; analyse de vulnérabilités</h3>
-            <p class="project-card-pitch">Audit de sécurité sur environnement de test : exploitation contrôlée de failles, capture de trafic, analyse forensique, documentation CVE et remédiations.</p>
-            <div class="project-card-stack">
-              <span class="tag">Kali Linux</span>
-              <span class="tag">Metasploit</span>
-              <span class="tag">Wireshark</span>
-              <span class="tag">Nessus</span>
-            </div>
+          <a class="card card-link project-card" href="../projects/pentesting.html" data-cat="securite">
+            <span class="eyebrow">Sécurité</span>
+            <h3>Pentesting &amp; vulnérabilités</h3>
+            <p>Audit d'une infrastructure cible, identification des vulnérabilités, exploitation contrôlée avec Metasploit et restitution avec recommandations de remédiation.</p>
+            <ul class="tag-list">
+              <li class="tag">Kali Linux</li>
+              <li class="tag">Metasploit</li>
+              <li class="tag">Nessus</li>
+              <li class="tag">OWASP</li>
+            </ul>
+            <span class="project-card-cta">
+              Voir le détail
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
           </a>
 
-          <a class="project-card" href="../projects/resolution-dns.html" data-cat="securite">
-            <div class="project-card-head">
-              <span class="project-card-cat">Sécurité</span>
-              <span class="project-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l6-6M6 5h5v5"/></svg>
-              </span>
-            </div>
-            <h3>Résolution DNS sécurisée (DNSSEC + DoT/DoH)</h3>
-            <p class="project-card-pitch">Infrastructure DNS sécurisée et redondante : signature DNSSEC, chiffrement DoT/DoH, BIND 9 maître/esclave, gestion des clés KSK/ZSK.</p>
-            <div class="project-card-stack">
-              <span class="tag">BIND 9</span>
-              <span class="tag">DNSSEC</span>
-              <span class="tag">DoT</span>
-              <span class="tag">DoH</span>
-              <span class="tag">Linux</span>
-            </div>
+          <a class="card card-link project-card" href="../projects/resolution-dns.html" data-cat="securite">
+            <span class="eyebrow">Sécurité</span>
+            <h3>Résolution DNS sécurisée</h3>
+            <p>Mise en place d'un service DNS authoritative et récursif, signature DNSSEC avec chain-of-trust, durcissement BIND 9 et tests de validation cryptographique.</p>
+            <ul class="tag-list">
+              <li class="tag">BIND 9</li>
+              <li class="tag">DNSSEC</li>
+              <li class="tag">Linux</li>
+              <li class="tag">Crypto</li>
+            </ul>
+            <span class="project-card-cta">
+              Voir le détail
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
           </a>
 
-          <a class="project-card" href="../projects/meteo-data.html" data-cat="iot">
-            <div class="project-card-head">
-              <span class="project-card-cat">IoT</span>
-              <span class="project-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l6-6M6 5h5v5"/></svg>
-              </span>
-            </div>
-            <h3>IoT — Réseau de capteurs météo</h3>
-            <p class="project-card-pitch">Réseau de capteurs IoT : ESP32 + transmission MQTT, stockage InfluxDB, dashboards temps réel Grafana pour analyse météorologique.</p>
-            <div class="project-card-stack">
-              <span class="tag">ESP32</span>
-              <span class="tag">MQTT</span>
-              <span class="tag">InfluxDB</span>
-              <span class="tag">Grafana</span>
-              <span class="tag">Python</span>
-            </div>
+          <a class="card card-link project-card" href="../projects/meteo-data.html" data-cat="iot">
+            <span class="eyebrow">IoT</span>
+            <h3>Capteurs IoT Météo</h3>
+            <p>Acquisition de données environnementales via capteurs, traitement, stockage et restitution. Projet d'instrumentation appliquée à la météo.</p>
+            <ul class="tag-list">
+              <li class="tag">Capteurs</li>
+              <li class="tag">Python</li>
+              <li class="tag">MySQL</li>
+              <li class="tag">Data</li>
+            </ul>
+            <span class="project-card-cta">
+              Voir le détail
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
           </a>
+
         </div>
-
-        <p class="projects-note">// Projets UTT en cours — résultats à venir au fil des semestres.</p>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-block" data-reveal-self>
+          <h2>Une de ces missions résonne avec votre besoin&nbsp;?</h2>
+          <p>Stage 6 mois disponible à partir de septembre 2026 &middot; Île-de-France.</p>
+          <div class="cta-actions">
+            <a class="btn btn-on-dark" href="contact.html" data-magnetic>
+              Me contacter
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost-on-dark" href="../assets/docs/CV_2024_Sami_Kharraz%20.pdf" download>
+              Télécharger le CV
+              <svg class="btn-icon btn-icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14M5 12l7 7 7-7M4 21h16"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 Sami Kharraz</span>
-      <span class="footer-meta">Paris · Mobile Île-de-France</span>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Sami Kharraz</div>
+          <div class="footer-meta">Paris &middot; Mobile Île-de-France</div>
+        </div>
+        <div class="footer-links">
+          <a class="nav-icon-link" href="https://github.com/tounsidu75" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.96 10.96 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a class="nav-icon-link" href="https://linkedin.com/in/sami-kharraz" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="nav-icon-link" href="mailto:sami.kharraz.pro@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer-meta" style="margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-border);">
+        © 2026 Sami Kharraz · Construit avec Geist
+      </p>
     </div>
   </footer>
 
