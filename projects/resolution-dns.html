@@ -1,88 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sami KHARRAZ | DNS sécurisé</title>
-  
-  <!-- Style global pour forcer le curseur standard -->
-  <style>
-    * {
-      cursor: auto !important;
-    }
-    .cursor-dot, .cursor-outline, [class*="cursor"] {
-      display: none !important;
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-  </style>
-  
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/projects.css">
-  <!-- Ajout de Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Ajout de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Résolution DNS sécurisée — Sami Kharraz</title>
+  <meta name="description" content="Infrastructure DNS sécurisée et redondante avec DNSSEC, DoT et DoH — projet BUT R&T Cybersécurité." />
+  <link rel="canonical" href="https://tounsidu75.github.io/projects/resolution-dns.html" />
+  <meta name="theme-color" content="#FAFAF8" />
 
-<body class="theme-tech">
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
-        <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
-        <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
-        <li><a href="../pages/formations.html"><i class="fas fa-graduation-cap"></i> Formations</a></li>
-        <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
-        <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
-        <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html" aria-label="Sami Kharraz · Accueil">
+        <span class="nav-brand-mark" aria-hidden="true">SK</span>
+        <span>Sami Kharraz</span>
+      </a>
+      <nav class="nav-list" aria-label="Navigation principale">
+        <a class="nav-link" href="../index.html">Accueil</a>
+        <a class="nav-link" href="../pages/about.html">À propos</a>
+        <a class="nav-link is-active" href="../pages/projects.html" aria-current="page">Projets</a>
+        <a class="nav-link" href="../pages/skills.html">Compétences</a>
+        <a class="nav-link" href="../pages/parcours.html">Parcours</a>
+        <a class="nav-link" href="../pages/contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-icon-link" href="https://github.com/tounsidu75" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.96 10.96 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a class="nav-icon-link" href="https://linkedin.com/in/sami-kharraz" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </header>
-  
-  <main>
-    <div class="project-detail">
-      <h2><i class="fas fa-server"></i> Résolution DNS sécurisée</h2>
-      
-      <div class="project-meta">
-        <div class="meta-item">
-          <h4>Type de projet</h4>
-          <p>Académique - BUT R&T</p>
-        </div>
-        <div class="meta-item">
-          <h4>Durée</h4>
-          <p>7 semaines</p>
-        </div>
-        <div class="meta-item">
-          <h4>Rôle</h4>
-          <p>Administrateur systèmes</p>
-        </div>
-        <div class="meta-item">
-          <h4>Année</h4>
-          <p>2023</p>
-        </div>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="container">
+        <a class="proj-back-link" href="../pages/projects.html">← Projets</a>
+        <p class="page-header-eyebrow">Sécurité · BUT R&amp;T</p>
+        <h1>Résolution DNS sécurisée.</h1>
+        <p>Infrastructure DNS sécurisée pour une organisation multi-sites — DNSSEC, DoT, DoH, BIND 9, redondance et protection contre les menaces contemporaines.</p>
+
+        <dl class="proj-meta-strip">
+          <div class="meta">
+            <dt>Type</dt>
+            <dd>Académique – BUT R&amp;T</dd>
+          </div>
+          <div class="meta">
+            <dt>Durée</dt>
+            <dd>7 semaines</dd>
+          </div>
+          <div class="meta">
+            <dt>Rôle</dt>
+            <dd>Administrateur systèmes</dd>
+          </div>
+          <div class="meta">
+            <dt>Année</dt>
+            <dd>2023</dd>
+          </div>
+        </dl>
       </div>
-      
-      <div class="project-description">
-        <h3>Objectif du projet</h3>
-        <p>
-          Ce projet avait pour objectif de mettre en place une infrastructure DNS sécurisée pour une organisation 
-          fictive multi-sites nécessitant un service de résolution de noms fiable, performant et protégé contre 
-          les menaces contemporaines. L'infrastructure devait prendre en compte la redondance, la sécurisation 
-          des échanges DNS, et l'implémentation de mécanismes avancés de protection contre l'empoisonnement de cache 
-          et les attaques par usurpation.
-        </p>
-        <p>
-          Dans un contexte où le DNS est devenu une cible privilégiée des cyberattaques, ce projet visait aussi à 
-          étudier et implémenter les meilleures pratiques en matière de sécurisation DNS, notamment les extensions
-          de sécurité DNSSEC, le DNS over TLS (DoT) et le DNS over HTTPS (DoH).
-        </p>
-      </div>
-      
-      <div class="project-description">
-        <h3>Architecture déployée</h3>
-        <ul>
+    </header>
+
+    <div class="container">
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">01</span>
+          <h2>Objectif du projet</h2>
+        </div>
+        <div class="proj-text">
+          <p>Ce projet avait pour objectif de mettre en place une infrastructure DNS sécurisée pour une organisation fictive multi-sites nécessitant un service de résolution de noms fiable, performant et protégé contre les menaces contemporaines. L'infrastructure devait prendre en compte la redondance, la sécurisation des échanges DNS, et l'implémentation de mécanismes avancés de protection contre l'empoisonnement de cache et les attaques par usurpation.</p>
+          <p>Dans un contexte où le DNS est devenu une cible privilégiée des cyberattaques, ce projet visait aussi à étudier et implémenter les meilleures pratiques en matière de sécurisation DNS, notamment les extensions de sécurité DNSSEC, le DNS over TLS (DoT) et le DNS over HTTPS (DoH).</p>
+        </div>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">02</span>
+          <h2>Architecture déployée</h2>
+        </div>
+        <ul class="proj-bullets">
           <li><strong>Serveurs DNS maîtres et esclaves</strong> distribués géographiquement pour la redondance et la répartition de charge</li>
           <li><strong>Implémentation DNSSEC</strong> pour assurer l'intégrité et l'authenticité des réponses DNS</li>
           <li><strong>Zones DNS internes et externes</strong> avec délégation appropriée</li>
@@ -91,11 +100,14 @@
           <li><strong>Serveurs DNS faisant autorité</strong> pour les domaines de l'organisation</li>
           <li><strong>Implémentation de DoT et DoH</strong> pour les clients supportant ces protocoles</li>
         </ul>
-      </div>
-      
-      <div class="project-challenges">
-        <h3>Défis rencontrés</h3>
-        <ul>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">03</span>
+          <h2>Défis rencontrés</h2>
+        </div>
+        <ul class="proj-bullets">
           <li>Configuration correcte des signatures DNSSEC et gestion du cycle de vie des clés</li>
           <li>Mise en place de la délégation sécurisée entre les zones DNS</li>
           <li>Implémentation de mécanismes de détection et de protection contre les attaques DDoS visant les serveurs DNS</li>
@@ -105,14 +117,17 @@
           <li>Établissement d'un système de surveillance pour détecter les anomalies DNS</li>
           <li>Documentation exhaustive des configurations et procédures pour faciliter la maintenance</li>
         </ul>
-      </div>
-      
-      <div class="project-description">
-        <h3>Solutions implémentées</h3>
-        <p>
-          Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :
-        </p>
-        <ul>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">04</span>
+          <h2>Solutions implémentées</h2>
+        </div>
+        <div class="proj-text">
+          <p>Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :</p>
+        </div>
+        <ul class="proj-bullets" style="margin-top: var(--sp-4);">
           <li><strong>BIND 9</strong> configuré avec les dernières recommandations de sécurité et optimisations de performance</li>
           <li><strong>Architecture hiérarchique</strong> avec serveurs faisant autorité (masters), de transfert (stealth masters) et secondaires (slaves)</li>
           <li><strong>Journalisation et surveillance avancées</strong> avec Prometheus et Grafana pour la détection d'anomalies</li>
@@ -122,32 +137,38 @@
           <li><strong>Proxy DoH et DoT</strong> basés sur Nginx et stunnel pour les clients modernes</li>
           <li><strong>Politique d'accès restrictive</strong> basée sur ACLs pour limiter les requêtes récursives aux utilisateurs autorisés</li>
         </ul>
-      </div>
-      
-      <div class="project-technologies">
-        <h3>Technologies utilisées</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">BIND 9</span>
-          <span class="tech-tag">DNSSEC</span>
-          <span class="tech-tag">OpenSSL</span>
-          <span class="tech-tag">DNS over TLS</span>
-          <span class="tech-tag">DNS over HTTPS</span>
-          <span class="tech-tag">Nginx</span>
-          <span class="tech-tag">Stunnel</span>
-          <span class="tech-tag">Linux (Debian)</span>
-          <span class="tech-tag">Shell scripting</span>
-          <span class="tech-tag">Prometheus</span>
-          <span class="tech-tag">Grafana</span>
-          <span class="tech-tag">RPZ</span>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">05</span>
+          <h2>Technologies utilisées</h2>
         </div>
-      </div>
-      
-      <div class="project-description">
-        <h3>Résultats et acquis</h3>
-        <p>
-          Ce projet m'a permis de développer des compétences approfondies en :
-        </p>
-        <ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tag">BIND 9</span>
+          <span class="tag">DNSSEC</span>
+          <span class="tag">OpenSSL</span>
+          <span class="tag">DNS over TLS</span>
+          <span class="tag">DNS over HTTPS</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Stunnel</span>
+          <span class="tag">Linux (Debian)</span>
+          <span class="tag">Shell scripting</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">RPZ</span>
+        </div>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">06</span>
+          <h2>Résultats et acquis</h2>
+        </div>
+        <div class="proj-text">
+          <p>Ce projet m'a permis de développer des compétences approfondies en :</p>
+        </div>
+        <ul class="proj-bullets" style="margin-top: var(--sp-4);">
           <li>Configuration et administration avancées de serveurs DNS</li>
           <li>Implémentation des protocoles de sécurité DNS modernes (DNSSEC, DoT, DoH)</li>
           <li>Conception d'architectures réseau redondantes et hautement disponibles</li>
@@ -157,53 +178,31 @@
           <li>Configuration de systèmes de surveillance et d'alerte pour les services critiques</li>
           <li>Documentation technique détaillée pour des infrastructures complexes</li>
         </ul>
-        <p>
-          L'infrastructure DNS mise en place a été soumise à plusieurs tests de pénétration et d'attaques simulées
-          qui ont confirmé sa robustesse. Les temps de réponse DNS ont été améliorés de 35% par rapport à la solution
-          précédente, tout en offrant un niveau de sécurité significativement plus élevé. Ce projet a également permis
-          d'établir un ensemble de bonnes pratiques qui ont été documentées pour une utilisation future dans d'autres
-          déploiements DNS sécurisés.
-        </p>
-      </div>
-      
-      <div class="buttons">
-        <a href="../pages/projects.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-        <a href="#" class="btn"><i class="fas fa-code"></i> Documentation technique</a>
+        <div class="proj-text" style="margin-top: var(--sp-5);">
+          <p>L'infrastructure DNS mise en place a été soumise à plusieurs tests de pénétration et d'attaques simulées qui ont confirmé sa robustesse. Les temps de réponse DNS ont été améliorés de 35% par rapport à la solution précédente, tout en offrant un niveau de sécurité significativement plus élevé. Ce projet a également permis d'établir un ensemble de bonnes pratiques qui ont été documentées pour une utilisation future dans d'autres déploiements DNS sécurisés.</p>
+        </div>
+      </section>
+
+      <div class="proj-back">
+        <a class="btn btn-secondary" href="../pages/projects.html">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+          Retour aux projets
+        </a>
+        <a class="btn btn-primary" href="../pages/contact.html">
+          Me contacter pour en discuter
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
       </div>
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Sami KHARRAZ</h3>
-          <p>Étudiant en réseaux et cybersécurité<br>Passionné par la sécurité informatique</p>
-        </div>
-        <div class="footer-section">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
-            <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Liens utiles</h3>
-          <ul>
-            <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
-            <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
-            <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Sami KHARRAZ - Tous droits réservés</p>
-      </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Sami Kharraz</span>
+      <span class="footer-meta">Paris · Mobile Île-de-France</span>
     </div>
   </footer>
-  
-  <!-- Ajout du script principal -->
-  <script src="../assets/js/script.js"></script>
+
+  <script src="../assets/js/main.js" defer></script>
 </body>
 </html>

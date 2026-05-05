@@ -1,86 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sami KHARRAZ | Réseau entreprise</title>
-  
-  <!-- Style global pour forcer le curseur standard -->
-  <style>
-    * {
-      cursor: auto !important;
-    }
-    .cursor-dot, .cursor-outline, [class*="cursor"] {
-      display: none !important;
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-  </style>
-  
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/projects.css">
-  <!-- Ajout de Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Ajout de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réseau d'entreprise — Sami Kharraz</title>
+  <meta name="description" content="Conception et déploiement d'une infrastructure réseau d'entreprise complète : OSPF, HSRP, QoS, Cisco IOS — projet BUT R&T." />
+  <link rel="canonical" href="https://tounsidu75.github.io/projects/reseau-entreprise.html" />
+  <meta name="theme-color" content="#FAFAF8" />
 
-<body class="theme-tech">
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
-        <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
-        <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
-        <li><a href="../pages/formations.html"><i class="fas fa-graduation-cap"></i> Formations</a></li>
-        <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
-        <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
-        <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html" aria-label="Sami Kharraz · Accueil">
+        <span class="nav-brand-mark" aria-hidden="true">SK</span>
+        <span>Sami Kharraz</span>
+      </a>
+      <nav class="nav-list" aria-label="Navigation principale">
+        <a class="nav-link" href="../index.html">Accueil</a>
+        <a class="nav-link" href="../pages/about.html">À propos</a>
+        <a class="nav-link is-active" href="../pages/projects.html" aria-current="page">Projets</a>
+        <a class="nav-link" href="../pages/skills.html">Compétences</a>
+        <a class="nav-link" href="../pages/parcours.html">Parcours</a>
+        <a class="nav-link" href="../pages/contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-icon-link" href="https://github.com/tounsidu75" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.96 10.96 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a class="nav-icon-link" href="https://linkedin.com/in/sami-kharraz" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </header>
-  
-  <main>
-    <div class="project-detail">
-      <h2><i class="fas fa-network-wired"></i> Création d'un réseau d'entreprise</h2>
-      
-      <div class="project-meta">
-        <div class="meta-item">
-          <h4>Type de projet</h4>
-          <p>Académique - BUT R&T</p>
-        </div>
-        <div class="meta-item">
-          <h4>Durée</h4>
-          <p>10 semaines</p>
-        </div>
-        <div class="meta-item">
-          <h4>Rôle</h4>
-          <p>Ingénieur réseau</p>
-        </div>
-        <div class="meta-item">
-          <h4>Année</h4>
-          <p>2023</p>
-        </div>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="container">
+        <a class="proj-back-link" href="../pages/projects.html">← Projets</a>
+        <p class="page-header-eyebrow">Réseau · BUT R&amp;T</p>
+        <h1>Création d'un réseau d'entreprise.</h1>
+        <p>Conception et déploiement d'une infrastructure réseau complète pour une entreprise fictive (400 employés, 3 services) — performance, sécurité, évolutivité et haute disponibilité.</p>
+
+        <dl class="proj-meta-strip">
+          <div class="meta">
+            <dt>Type</dt>
+            <dd>Académique – BUT R&amp;T</dd>
+          </div>
+          <div class="meta">
+            <dt>Durée</dt>
+            <dd>10 semaines</dd>
+          </div>
+          <div class="meta">
+            <dt>Rôle</dt>
+            <dd>Ingénieur réseau</dd>
+          </div>
+          <div class="meta">
+            <dt>Année</dt>
+            <dd>2023</dd>
+          </div>
+        </dl>
       </div>
-      
-      <div class="project-description">
-        <h3>Objectif du projet</h3>
-        <p>
-          Ce projet avait pour objectif de concevoir et déployer une infrastructure réseau complète pour une entreprise fictive 
-          en pleine expansion (400 employés, 3 services distincts). L'infrastructure devait répondre à des exigences précises 
-          en termes de performance, de sécurité, d'évolutivité et de haute disponibilité.
-        </p>
-        <p>
-          L'entreprise souhaitait moderniser son infrastructure pour accompagner sa croissance et adopter de nouveaux services numériques. 
-          Le réseau devait prendre en charge la téléphonie IP, la vidéoconférence, les applications métier critiques et intégrer une
-          politique de sécurité robuste avec isolation appropriée entre les différents services et utilisateurs.
-        </p>
-      </div>
-      
-      <div class="project-description">
-        <h3>Architecture déployée</h3>
-        <ul>
+    </header>
+
+    <div class="container">
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">01</span>
+          <h2>Objectif du projet</h2>
+        </div>
+        <div class="proj-text">
+          <p>Ce projet avait pour objectif de concevoir et déployer une infrastructure réseau complète pour une entreprise fictive en pleine expansion (400 employés, 3 services distincts). L'infrastructure devait répondre à des exigences précises en termes de performance, de sécurité, d'évolutivité et de haute disponibilité.</p>
+          <p>L'entreprise souhaitait moderniser son infrastructure pour accompagner sa croissance et adopter de nouveaux services numériques. Le réseau devait prendre en charge la téléphonie IP, la vidéoconférence, les applications métier critiques et intégrer une politique de sécurité robuste avec isolation appropriée entre les différents services et utilisateurs.</p>
+        </div>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">02</span>
+          <h2>Architecture déployée</h2>
+        </div>
+        <ul class="proj-bullets">
           <li><strong>Backbone central</strong> redondant avec des commutateurs multicouches Cisco Catalyst</li>
           <li><strong>Hiérarchie réseau</strong> à trois niveaux (cœur, distribution, accès) pour une scalabilité optimale</li>
           <li><strong>Segmentation par VLANs</strong> selon les départements et types de services</li>
@@ -90,11 +101,14 @@
           <li><strong>Réseau Wi-Fi</strong> sécurisé avec authentification 802.1X</li>
           <li><strong>Pare-feu périmétrique</strong> pour la protection de l'ensemble du réseau</li>
         </ul>
-      </div>
-      
-      <div class="project-challenges">
-        <h3>Défis rencontrés</h3>
-        <ul>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">03</span>
+          <h2>Défis rencontrés</h2>
+        </div>
+        <ul class="proj-bullets">
           <li>Conception d'une topologie efficace qui équilibre performance, sécurité et coût</li>
           <li>Mise en place d'une stratégie d'adressage IP cohérente permettant une évolution future</li>
           <li>Configuration de la redondance à tous les niveaux sans créer de boucles de commutation</li>
@@ -103,14 +117,17 @@
           <li>Configuration d'un système de monitoring permettant une détection rapide des anomalies</li>
           <li>Documentation exhaustive de l'infrastructure pour faciliter la maintenance</li>
         </ul>
-      </div>
-      
-      <div class="project-description">
-        <h3>Solutions implémentées</h3>
-        <p>
-          Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :
-        </p>
-        <ul>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">04</span>
+          <h2>Solutions implémentées</h2>
+        </div>
+        <div class="proj-text">
+          <p>Pour répondre à ces défis, j'ai mis en œuvre plusieurs solutions techniques :</p>
+        </div>
+        <ul class="proj-bullets" style="margin-top: var(--sp-4);">
           <li><strong>Plan d'adressage IPv4/IPv6</strong> avec découpage en sous-réseaux adapté à la croissance future</li>
           <li><strong>Configuration de STP</strong> (Spanning Tree Protocol) avec optimisation par RSTP et MSTP pour prévenir les boucles tout en assurant la redondance</li>
           <li><strong>Mise en place d'OSPF</strong> comme protocole de routage interne avec création d'aires distinctes pour optimiser les échanges</li>
@@ -120,32 +137,38 @@
           <li><strong>Configuration d'un serveur RADIUS</strong> pour la centralisation des authentifications</li>
           <li><strong>Mise en place de SNMP</strong> pour la supervision des équipements et la détection proactive des problèmes</li>
         </ul>
-      </div>
-      
-      <div class="project-technologies">
-        <h3>Technologies utilisées</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">Cisco IOS</span>
-          <span class="tech-tag">VLANs</span>
-          <span class="tech-tag">STP/RSTP</span>
-          <span class="tech-tag">OSPF</span>
-          <span class="tech-tag">HSRP</span>
-          <span class="tech-tag">QoS</span>
-          <span class="tech-tag">802.1X</span>
-          <span class="tech-tag">RADIUS</span>
-          <span class="tech-tag">SNMP</span>
-          <span class="tech-tag">Packet Tracer</span>
-          <span class="tech-tag">GNS3</span>
-          <span class="tech-tag">Wireshark</span>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">05</span>
+          <h2>Technologies utilisées</h2>
         </div>
-      </div>
-      
-      <div class="project-description">
-        <h3>Résultats et acquis</h3>
-        <p>
-          Ce projet m'a permis de développer des compétences approfondies en :
-        </p>
-        <ul>
+        <div class="project-card-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tag">Cisco IOS</span>
+          <span class="tag">VLANs</span>
+          <span class="tag">STP/RSTP</span>
+          <span class="tag">OSPF</span>
+          <span class="tag">HSRP</span>
+          <span class="tag">QoS</span>
+          <span class="tag">802.1X</span>
+          <span class="tag">RADIUS</span>
+          <span class="tag">SNMP</span>
+          <span class="tag">Packet Tracer</span>
+          <span class="tag">GNS3</span>
+          <span class="tag">Wireshark</span>
+        </div>
+      </section>
+
+      <section class="proj-section">
+        <div class="proj-section-head">
+          <span class="proj-section-num">06</span>
+          <h2>Résultats et acquis</h2>
+        </div>
+        <div class="proj-text">
+          <p>Ce projet m'a permis de développer des compétences approfondies en :</p>
+        </div>
+        <ul class="proj-bullets" style="margin-top: var(--sp-4);">
           <li>Conception d'architectures réseau complexes et évolutives</li>
           <li>Configuration avancée d'équipements Cisco (commutateurs, routeurs)</li>
           <li>Mise en œuvre de protocoles de routage et de redondance</li>
@@ -154,52 +177,31 @@
           <li>Supervision et maintenance d'infrastructures réseau d'entreprise</li>
           <li>Documentation technique détaillée d'architectures réseau</li>
         </ul>
-        <p>
-          Le réseau déployé a été soumis à des tests de charge et de résilience qui ont confirmé sa capacité à maintenir 
-          le service même en cas de défaillance matérielle. La simulation de différents scénarios de panne a permis de valider 
-          les temps de convergence et la continuité des services critiques. Ce projet a été salué pour sa conception robuste 
-          et a servi de modèle pour d'autres étudiants du département.
-        </p>
-      </div>
-      
-      <div class="buttons">
-        <a href="../pages/projects.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-        <a href="#" class="btn"><i class="fas fa-code"></i> Documentation technique</a>
+        <div class="proj-text" style="margin-top: var(--sp-5);">
+          <p>Le réseau déployé a été soumis à des tests de charge et de résilience qui ont confirmé sa capacité à maintenir le service même en cas de défaillance matérielle. La simulation de différents scénarios de panne a permis de valider les temps de convergence et la continuité des services critiques. Ce projet a été salué pour sa conception robuste et a servi de modèle pour d'autres étudiants du département.</p>
+        </div>
+      </section>
+
+      <div class="proj-back">
+        <a class="btn btn-secondary" href="../pages/projects.html">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+          Retour aux projets
+        </a>
+        <a class="btn btn-primary" href="../pages/contact.html">
+          Me contacter pour en discuter
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
       </div>
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Sami KHARRAZ</h3>
-          <p>Étudiant en réseaux et cybersécurité<br>Passionné par la sécurité informatique</p>
-        </div>
-        <div class="footer-section">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="../pages/about.html"><i class="fas fa-user"></i> À propos</a></li>
-            <li><a href="../pages/skills.html"><i class="fas fa-laptop-code"></i> Compétences</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Liens utiles</h3>
-          <ul>
-            <li><a href="../pages/experiences.html"><i class="fas fa-briefcase"></i> Expériences</a></li>
-            <li><a href="../pages/projects.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
-            <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Sami KHARRAZ - Tous droits réservés</p>
-      </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Sami Kharraz</span>
+      <span class="footer-meta">Paris · Mobile Île-de-France</span>
     </div>
   </footer>
-  
-  <!-- Ajout du script principal -->
-  <script src="../assets/js/script.js"></script>
+
+  <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
