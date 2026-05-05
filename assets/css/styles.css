@@ -1008,6 +1008,23 @@ code, pre, .mono { font-family: var(--font-mono); }
   font-weight: 500;
 }
 
+/* Course themes (formation page — BUT R&T cursus organized by domain) */
+.course-themes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+.course-theme-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--space-3);
+}
+
 /* -----------------------------------------------------------
    20. About — bloc latéral & infos rapides
    ----------------------------------------------------------- */
