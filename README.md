@@ -1,50 +1,32 @@
-# Portfolio de Sami KHARRAZ
+# Portfolio de Sami Kharraz
 
-## À propos du projet
+Portfolio personnel publié avec GitHub Pages : présentation du profil, des compétences, des expériences et des projets réseau / cybersécurité.
 
-Ce portfolio est une vitrine de mon parcours, de mes compétences et de mes réalisations en tant qu'étudiant en réseaux et cybersécurité. Il est conçu pour présenter de manière claire et professionnelle mon profil aux recruteurs et autres professionnels du secteur.
+## Pages principales
 
-## Structure du site
+- `index.html` — accueil
+- `pages/about.html` — à propos
+- `pages/projects.html` — projets
+- `pages/skills.html` — compétences
+- `pages/parcours.html` — parcours académique
+- `pages/experience.html` — expériences professionnelles
+- `pages/contact.html` — contact
 
-Le site a été restructuré avec une architecture multi-pages pour améliorer la navigation et la découverte progressive du contenu:
+## Version anglaise
 
-- **Page d'accueil** (index.html): Introduction et aperçu général
-- **À propos** (pages/about.html): Mon parcours et ma personnalité
-- **Compétences** (pages/skills.html): Expertise technique et certifications
-- **Expériences** (pages/experiences.html): Parcours professionnel
-- **Projets** (pages/projects.html): Réalisations techniques
-- **Contact** (pages/contact.html): Formulaire et coordonnées
+La version anglaise est disponible dans le dossier `en/` avec les mêmes sections principales.
 
-Chaque projet dispose également d'une page détaillée dans le dossier `projects/`.
+## Projets détaillés
 
-## Technologies utilisées
+Les fiches projet sont dans le dossier `projects/`.
 
-- HTML5 sémantique
-- CSS3 avancé (variables, flexbox, grid)
+## Stack
+
+- HTML5
+- CSS3
 - JavaScript vanilla
-- Animations et transitions optimisées
-- Design responsive
-- Fonctionnalités d'accessibilité
+- GitHub Pages
 
-## Outils de déploiement
+## Déploiement
 
-Plusieurs fichiers batch sont disponibles pour faciliter la maintenance:
-
-- `create-directories.bat`: Crée la structure de dossiers nécessaire
-- `move-projects.bat`: Aide à migrer les fichiers de projets
-- `verify-system.bat`: Vérifie l'intégrité de la structure du site
-
-## Futures évolutions
-
-- Ajout d'un blog technique
-- Intégration d'une section de témoignages
-- Mise en place d'une version anglaise
-- Amélioration continue des performances
-
-## Contact
-
-Pour toute question, n'hésitez pas à me contacter via le formulaire disponible sur le site ou directement à l'adresse: [votre.email@example.com](mailto:votre.email@example.com).
-
----
-
-©2025 Sami KHARRAZ - Tous droits réservés
+Le site est publié depuis la branche `main` du dépôt GitHub Pages.
