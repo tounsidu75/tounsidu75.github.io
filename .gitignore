@@ -5,3 +5,4 @@ nul
 *.log
 .vscode/
 .idea/
+memory/
