@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/styles.css?v=home-clean-2026-06-05" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=home-mockup-2026-06-05" />
 
   <script type="application/ld+json">
   {
@@ -39,7 +39,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Aller au contenu</a>
   <div class="scroll-progress" aria-hidden="true"></div>
 
@@ -82,49 +82,68 @@
     <section class="home-hero" aria-labelledby="home-title">
       <div class="container home-hero-grid">
         <div class="home-hero-copy">
-          <p class="home-kicker">Sami Kharraz &middot; UTT &middot; Stage septembre 2026</p>
-          <h1 id="home-title">
+          <p class="home-kicker">&Eacute;tudiant ing&eacute;nieur en R&eacute;seaux &amp; T&eacute;l&eacute;communications</p>
+          <h1 id="home-title" aria-label="&Eacute;tudiant ing&eacute;nieur R&eacute;seaux et T&eacute;l&eacute;communications">
             <span>&Eacute;tudiant ing&eacute;nieur</span>
-            <span>R&eacute;seaux &amp; <span class="home-title-full">T&eacute;l&eacute;communications</span><span class="home-title-short">T&eacute;l&eacute;coms</span></span>
+            <span class="home-title-accent">R&eacute;seaux &amp;</span>
+            <span class="home-title-accent"><span class="home-title-full">T&eacute;l&eacute;communications</span><span class="home-title-short">T&eacute;l&eacute;coms</span></span>
           </h1>
           <p class="home-lead">
-            Je recherche un stage de 6 mois en &Icirc;le-de-France en administration syst&egrave;mes,
-            r&eacute;seaux, cybers&eacute;curit&eacute; ou infrastructure IT.
+            Je recherche un stage de <strong>6 mois</strong> &agrave; partir de <strong>septembre 2026</strong>
+            en administration r&eacute;seau, syst&egrave;mes, s&eacute;curit&eacute; ou infrastructure IT
+            en <strong>&Icirc;le-de-France</strong>.
           </p>
           <p class="home-support">
             Profil junior orient&eacute; terrain : configuration LAN/WLAN, support utilisateurs,
             documentation technique, pare-feu Huawei, VLANs, Wi-Fi 6 et s&eacute;curisation r&eacute;seau.
           </p>
           <div class="home-actions">
-            <a class="btn btn-primary" href="pages/projects.html">Voir les projets</a>
-            <a class="btn btn-ghost" href="pages/contact.html">Me contacter</a>
+            <a class="btn btn-primary" href="pages/projects.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H10l2 2h5.5A2.5 2.5 0 0 1 20 9.5v7A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/></svg>
+              Voir les projets
+            </a>
+            <a class="btn btn-ghost" href="pages/contact.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 7.5h15v9h-15v-9Z"/><path d="m5 8 7 5 7-5"/></svg>
+              Me contacter
+            </a>
           </div>
         </div>
 
         <aside class="home-summary" aria-label="R&eacute;sum&eacute; recruteur">
-          <div class="home-summary-head">
-            <span class="home-status">Recherche active</span>
-            <span class="home-code">R&amp;T / S&eacute;curit&eacute;</span>
-          </div>
           <dl class="home-summary-list">
-            <div>
+            <div class="home-summary-row">
+              <span class="home-summary-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 12l5-5"/><path d="M16 5h3v3"/></svg>
+              </span>
               <dt>Objectif</dt>
-              <dd>Stage r&eacute;seaux, syst&egrave;mes, cybers&eacute;curit&eacute;</dd>
+              <dd><strong>Stage de 6 mois</strong><span>en R&eacute;seaux, Syst&egrave;mes ou S&eacute;curit&eacute;</span></dd>
             </div>
-            <div>
+            <div class="home-summary-row">
+              <span class="home-summary-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3v4"/><path d="M17 3v4"/><path d="M4.5 8h15"/><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 19 20.5H5A1.5 1.5 0 0 1 3.5 19V7A1.5 1.5 0 0 1 5 5.5Z"/></svg>
+              </span>
               <dt>Disponibilit&eacute;</dt>
-              <dd>6 mois &middot; septembre 2026</dd>
+              <dd><strong>&Agrave; partir de septembre 2026</strong></dd>
             </div>
-            <div>
+            <div class="home-summary-row">
+              <span class="home-summary-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 0 0-12 0c0 5.8 6 11 6 11Z"/><path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+              </span>
               <dt>Localisation</dt>
-              <dd>Paris / &Icirc;le-de-France</dd>
+              <dd><strong>&Icirc;le-de-France</strong><span>D&eacute;placements possibles</span></dd>
             </div>
-            <div>
-              <dt>Stack utile</dt>
-              <dd>Cisco, Huawei, Linux, Windows Server, Wireshark</dd>
+            <div class="home-summary-row">
+              <span class="home-summary-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 6h14v4H5z"/><path d="M5 14h14v4H5z"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M12 8h5"/><path d="M12 16h5"/></svg>
+              </span>
+              <dt>Stack principal</dt>
+              <dd>
+                <strong>Linux &middot; Windows Server &middot; Cisco/Huawei</strong>
+                <span>TCP/IP &middot; VLAN &middot; OSPF &middot; NAT &middot; DNS &middot; DHCP</span>
+                <span>Python &middot; Bash &middot; Docker &middot; Wireshark &middot; Git</span>
+              </dd>
             </div>
           </dl>
-          <a class="home-summary-link" href="assets/docs/CV_2024_Sami_Kharraz%20.pdf" download>T&eacute;l&eacute;charger le CV</a>
         </aside>
       </div>
     </section>
@@ -132,38 +151,65 @@
     <section class="home-proof" aria-label="Rep&egrave;res rapides">
       <div class="container home-proof-grid">
         <div class="home-proof-item">
-          <strong>3</strong>
-          <span>exp&eacute;riences terrain</span>
+          <span class="home-proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/><path d="M4.5 8h15v11h-15z"/><path d="M9 13h6"/></svg>
+          </span>
+          <div class="home-proof-copy">
+            <p><strong>3</strong><span>exp&eacute;riences terrain</span></p>
+            <small>en entreprise et support</small>
+          </div>
         </div>
         <div class="home-proof-item">
-          <strong>5</strong>
-          <span>projets techniques document&eacute;s</span>
+          <span class="home-proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m9 8-4 4 4 4"/><path d="m15 8 4 4-4 4"/><path d="m13 6-2 12"/></svg>
+          </span>
+          <div class="home-proof-copy">
+            <p><strong>5</strong><span>projets document&eacute;s</span></p>
+            <small>r&eacute;seau, s&eacute;curit&eacute;, syst&egrave;mes</small>
+          </div>
         </div>
-        <div class="home-proof-item">
-          <strong>2025-2028</strong>
-          <span>cycle ing&eacute;nieur UTT</span>
+        <div class="home-proof-item home-proof-item-education">
+          <span class="home-proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m12 4 9 5-9 5-9-5 9-5Z"/><path d="M6 11.5V16c2.8 2 9.2 2 12 0v-4.5"/></svg>
+          </span>
+          <div class="home-proof-copy">
+            <p><strong>UTT 2025-2028</strong></p>
+            <span>Cycle ing&eacute;nieur</span>
+            <small>R&eacute;seaux &amp; T&eacute;l&eacute;communications</small>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section home-section">
       <div class="container">
-        <div class="home-section-head">
-          <p class="home-section-label">Ce que je peux apporter</p>
-          <h2>Un profil junior clair, technique et exploitable.</h2>
+        <div class="home-section-head home-section-head-centered">
+          <h2>Ce que je peux apporter</h2>
         </div>
         <div class="home-card-grid">
           <article class="home-card">
+            <span class="home-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M19 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="m7 9 10-5"/><path d="m7 11 10 7"/></svg>
+            </span>
             <h3>R&eacute;seaux d'entreprise</h3>
-            <p>VLANs, adressage IP, DNS/DHCP, routage, Wireshark, Cisco IOS et Huawei.</p>
+            <p>Conception, d&eacute;ploiement et administration d'infrastructures r&eacute;seau s&eacute;curis&eacute;es.</p>
+            <span class="home-card-meta">VLAN &middot; OSPF &middot; NAT &middot; Wi-Fi &middot; VPN</span>
           </article>
           <article class="home-card">
+            <span class="home-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 5h14v10H5z"/><path d="M9 19h6"/><path d="M12 15v4"/></svg>
+            </span>
             <h3>Syst&egrave;mes &amp; support</h3>
-            <p>Linux, Windows Server, Active Directory, documentation et support utilisateurs.</p>
+            <p>Administration Linux/Windows, services d'annuaire, support utilisateurs et supervision.</p>
+            <span class="home-card-meta">Linux &middot; Windows Server &middot; AD &middot; Support</span>
           </article>
           <article class="home-card">
+            <span class="home-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 5-3.2 8.2-7 10-3.8-1.8-7-5-7-10V6l7-3Z"/></svg>
+            </span>
             <h3>S&eacute;curit&eacute; op&eacute;rationnelle</h3>
-            <p>ACL, pare-feu, segmentation, Nessus, WPA2/WPA3, analyse et rem&eacute;diation.</p>
+            <p>Durcissement, supervision et r&eacute;ponse aux incidents pour des environnements s&ucirc;rs.</p>
+            <span class="home-card-meta">ACL &middot; Firewalls &middot; IDS/IPS &middot; SIEM &middot; Analyse</span>
           </article>
         </div>
       </div>
