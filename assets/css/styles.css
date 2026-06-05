@@ -1387,6 +1387,14 @@ code, pre, .mono { font-family: var(--font-mono); }
   color: var(--color-text-primary);
 }
 
+.home-hero h1 > span {
+  display: block;
+}
+
+.home-title-short {
+  display: none;
+}
+
 .home-lead {
   max-width: 660px;
   margin-top: var(--space-5);
@@ -1689,7 +1697,15 @@ code, pre, .mono { font-family: var(--font-mono); }
     max-width: 100%;
     font-size: clamp(2.35rem, 10.5vw, 3rem);
     letter-spacing: -0.055em;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+  }
+
+  .home-title-full {
+    display: none;
+  }
+
+  .home-title-short {
+    display: inline;
   }
 
   .home-actions,
